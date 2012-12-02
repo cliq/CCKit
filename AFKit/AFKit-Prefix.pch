@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'AFKit' target in the 'AFKit' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif
