@@ -10,6 +10,16 @@
 		4278B78C166B85E800D0FE59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4278B78B166B85E800D0FE59 /* Foundation.framework */; };
 		4278B791166B85E800D0FE59 /* AFKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4278B790166B85E800D0FE59 /* AFKit.h */; };
 		4278B793166B85E800D0FE59 /* AFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B792166B85E800D0FE59 /* AFKit.m */; };
+		4278B7A0166B860800D0FE59 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4278B79F166B860800D0FE59 /* UIKit.framework */; };
+		4278B7A1166B860800D0FE59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4278B78B166B85E800D0FE59 /* Foundation.framework */; };
+		4278B7A3166B860800D0FE59 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4278B7A2166B860800D0FE59 /* CoreGraphics.framework */; };
+		4278B7A9166B860800D0FE59 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4278B7A7166B860800D0FE59 /* InfoPlist.strings */; };
+		4278B7AB166B860800D0FE59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B7AA166B860800D0FE59 /* main.m */; };
+		4278B7AF166B860800D0FE59 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B7AE166B860800D0FE59 /* AppDelegate.m */; };
+		4278B7B1166B860800D0FE59 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4278B7B0166B860800D0FE59 /* Default.png */; };
+		4278B7B3166B860800D0FE59 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4278B7B2166B860800D0FE59 /* Default@2x.png */; };
+		4278B7B5166B860800D0FE59 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4278B7B4166B860800D0FE59 /* Default-568h@2x.png */; };
+		4278B7B9166B862D00D0FE59 /* AFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B792166B85E800D0FE59 /* AFKit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +41,18 @@
 		4278B78F166B85E800D0FE59 /* AFKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AFKit-Prefix.pch"; sourceTree = "<group>"; };
 		4278B790166B85E800D0FE59 /* AFKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFKit.h; sourceTree = "<group>"; };
 		4278B792166B85E800D0FE59 /* AFKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFKit.m; sourceTree = "<group>"; };
+		4278B79D166B860800D0FE59 /* AFKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AFKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4278B79F166B860800D0FE59 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4278B7A2166B860800D0FE59 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4278B7A6166B860800D0FE59 /* AFKitDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AFKitDemo-Info.plist"; sourceTree = "<group>"; };
+		4278B7A8166B860800D0FE59 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4278B7AA166B860800D0FE59 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4278B7AC166B860800D0FE59 /* AFKitDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AFKitDemo-Prefix.pch"; sourceTree = "<group>"; };
+		4278B7AD166B860800D0FE59 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4278B7AE166B860800D0FE59 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4278B7B0166B860800D0FE59 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		4278B7B2166B860800D0FE59 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		4278B7B4166B860800D0FE59 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +64,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4278B79A166B860700D0FE59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4278B7A0166B860800D0FE59 /* UIKit.framework in Frameworks */,
+				4278B7A1166B860800D0FE59 /* Foundation.framework in Frameworks */,
+				4278B7A3166B860800D0FE59 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -49,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				4278B78D166B85E800D0FE59 /* AFKit */,
+				4278B7A4166B860800D0FE59 /* AFKitDemo */,
 				4278B78A166B85E800D0FE59 /* Frameworks */,
 				4278B789166B85E800D0FE59 /* Products */,
 			);
@@ -58,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				4278B788166B85E800D0FE59 /* libAFKit.a */,
+				4278B79D166B860800D0FE59 /* AFKitDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,6 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				4278B78B166B85E800D0FE59 /* Foundation.framework */,
+				4278B79F166B860800D0FE59 /* UIKit.framework */,
+				4278B7A2166B860800D0FE59 /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -84,6 +120,30 @@
 			isa = PBXGroup;
 			children = (
 				4278B78F166B85E800D0FE59 /* AFKit-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4278B7A4166B860800D0FE59 /* AFKitDemo */ = {
+			isa = PBXGroup;
+			children = (
+				4278B7AD166B860800D0FE59 /* AppDelegate.h */,
+				4278B7AE166B860800D0FE59 /* AppDelegate.m */,
+				4278B7A5166B860800D0FE59 /* Supporting Files */,
+			);
+			path = AFKitDemo;
+			sourceTree = "<group>";
+		};
+		4278B7A5166B860800D0FE59 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4278B7A6166B860800D0FE59 /* AFKitDemo-Info.plist */,
+				4278B7A7166B860800D0FE59 /* InfoPlist.strings */,
+				4278B7AA166B860800D0FE59 /* main.m */,
+				4278B7AC166B860800D0FE59 /* AFKitDemo-Prefix.pch */,
+				4278B7B0166B860800D0FE59 /* Default.png */,
+				4278B7B2166B860800D0FE59 /* Default@2x.png */,
+				4278B7B4166B860800D0FE59 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -108,6 +168,23 @@
 			productReference = 4278B788166B85E800D0FE59 /* libAFKit.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		4278B79C166B860700D0FE59 /* AFKitDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4278B7B6166B860800D0FE59 /* Build configuration list for PBXNativeTarget "AFKitDemo" */;
+			buildPhases = (
+				4278B799166B860700D0FE59 /* Sources */,
+				4278B79A166B860700D0FE59 /* Frameworks */,
+				4278B79B166B860700D0FE59 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AFKitDemo;
+			productName = AFKitDemo;
+			productReference = 4278B79D166B860800D0FE59 /* AFKitDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -130,9 +207,24 @@
 			projectRoot = "";
 			targets = (
 				4278B787166B85E800D0FE59 /* AFKit */,
+				4278B79C166B860700D0FE59 /* AFKitDemo */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4278B79B166B860700D0FE59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4278B7A9166B860800D0FE59 /* InfoPlist.strings in Resources */,
+				4278B7B1166B860800D0FE59 /* Default.png in Resources */,
+				4278B7B3166B860800D0FE59 /* Default@2x.png in Resources */,
+				4278B7B5166B860800D0FE59 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4278B784166B85E800D0FE59 /* Sources */ = {
@@ -143,7 +235,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4278B799166B860700D0FE59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4278B7AB166B860800D0FE59 /* main.m in Sources */,
+				4278B7AF166B860800D0FE59 /* AppDelegate.m in Sources */,
+				4278B7B9166B862D00D0FE59 /* AFKit.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4278B7A7166B860800D0FE59 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4278B7A8166B860800D0FE59 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		4278B794166B85E800D0FE59 /* Debug */ = {
@@ -217,6 +330,31 @@
 			};
 			name = Release;
 		};
+		4278B7B7166B860800D0FE59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AFKitDemo/AFKitDemo-Prefix.pch";
+				INFOPLIST_FILE = "AFKitDemo/AFKitDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4278B7B8166B860800D0FE59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AFKitDemo/AFKitDemo-Prefix.pch";
+				INFOPLIST_FILE = "AFKitDemo/AFKitDemo-Info.plist";
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -234,6 +372,14 @@
 			buildConfigurations = (
 				4278B797166B85E800D0FE59 /* Debug */,
 				4278B798166B85E800D0FE59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4278B7B6166B860800D0FE59 /* Build configuration list for PBXNativeTarget "AFKitDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4278B7B7166B860800D0FE59 /* Debug */,
+				4278B7B8166B860800D0FE59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
