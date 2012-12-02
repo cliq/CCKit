@@ -20,6 +20,8 @@
 		4278B7B3166B860800D0FE59 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4278B7B2166B860800D0FE59 /* Default@2x.png */; };
 		4278B7B5166B860800D0FE59 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4278B7B4166B860800D0FE59 /* Default-568h@2x.png */; };
 		4278B7B9166B862D00D0FE59 /* AFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B792166B85E800D0FE59 /* AFKit.m */; };
+		4278B7C5166B913400D0FE59 /* AFModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B7C4166B913400D0FE59 /* AFModel.m */; };
+		4278B7C6166B913400D0FE59 /* AFModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B7C4166B913400D0FE59 /* AFModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -53,6 +55,9 @@
 		4278B7B0166B860800D0FE59 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		4278B7B2166B860800D0FE59 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		4278B7B4166B860800D0FE59 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		4278B7C2166B913400D0FE59 /* AFModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFModel.h; sourceTree = "<group>"; };
+		4278B7C3166B913400D0FE59 /* AFModelDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFModelDelegate.h; sourceTree = "<group>"; };
+		4278B7C4166B913400D0FE59 /* AFModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +114,7 @@
 		4278B78D166B85E800D0FE59 /* AFKit */ = {
 			isa = PBXGroup;
 			children = (
+				4278B7C1166B912400D0FE59 /* Model */,
 				4278B790166B85E800D0FE59 /* AFKit.h */,
 				4278B792166B85E800D0FE59 /* AFKit.m */,
 				4278B78E166B85E800D0FE59 /* Supporting Files */,
@@ -146,6 +152,16 @@
 				4278B7B4166B860800D0FE59 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4278B7C1166B912400D0FE59 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4278B7C3166B913400D0FE59 /* AFModelDelegate.h */,
+				4278B7C2166B913400D0FE59 /* AFModel.h */,
+				4278B7C4166B913400D0FE59 /* AFModel.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4278B793166B85E800D0FE59 /* AFKit.m in Sources */,
+				4278B7C5166B913400D0FE59 /* AFModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +259,7 @@
 				4278B7AB166B860800D0FE59 /* main.m in Sources */,
 				4278B7AF166B860800D0FE59 /* AppDelegate.m in Sources */,
 				4278B7B9166B862D00D0FE59 /* AFKit.m in Sources */,
+				4278B7C6166B913400D0FE59 /* AFModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
