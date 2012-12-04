@@ -18,9 +18,10 @@
 - (BOOL)isLoadingMore;
 - (BOOL)isOutdated;
 
-- (void)load;
-- (void)loadMore;
+- (void)loadMore:(BOOL)more;
 - (void)cancel;
+
+- (void)reset; // Clear parameters and response
 
 // TODO: support if needed later
 // - (void)invalidate:(BOOL)erase;

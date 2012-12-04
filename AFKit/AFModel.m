@@ -31,16 +31,16 @@
     return NO;
 }
 
-- (void)load;
-{
-}
-- (void)loadMore;
+- (void)loadMore:(BOOL)more;
 {
 }
 - (void)cancel;
 {
 }
 
+- (void)reset;
+{
+}
 
 #pragma mark - Notify Delegates
 

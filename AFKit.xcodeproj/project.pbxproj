@@ -24,6 +24,10 @@
 		4278B7C6166B913400D0FE59 /* AFModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B7C4166B913400D0FE59 /* AFModel.m */; };
 		4278B7C9166CC8CB00D0FE59 /* AFModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B7C8166CC8CB00D0FE59 /* AFModelViewController.m */; };
 		4278B7CA166CC8CB00D0FE59 /* AFModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B7C8166CC8CB00D0FE59 /* AFModelViewController.m */; };
+		4278B7D5166CD28100D0FE59 /* AFHTTPModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B7D4166CD28100D0FE59 /* AFHTTPModel.m */; };
+		4278B7D6166CD28100D0FE59 /* AFHTTPModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B7D4166CD28100D0FE59 /* AFHTTPModel.m */; };
+		4278B7DA166CD77F00D0FE59 /* AFHTTPModelResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B7D9166CD77F00D0FE59 /* AFHTTPModelResponse.m */; };
+		4278B7DB166CD77F00D0FE59 /* AFHTTPModelResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B7D9166CD77F00D0FE59 /* AFHTTPModelResponse.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -62,6 +66,10 @@
 		4278B7C4166B913400D0FE59 /* AFModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFModel.m; sourceTree = "<group>"; };
 		4278B7C7166CC8CB00D0FE59 /* AFModelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFModelViewController.h; sourceTree = "<group>"; };
 		4278B7C8166CC8CB00D0FE59 /* AFModelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFModelViewController.m; sourceTree = "<group>"; };
+		4278B7D3166CD28100D0FE59 /* AFHTTPModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPModel.h; sourceTree = "<group>"; };
+		4278B7D4166CD28100D0FE59 /* AFHTTPModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPModel.m; sourceTree = "<group>"; };
+		4278B7D8166CD77F00D0FE59 /* AFHTTPModelResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPModelResponse.h; sourceTree = "<group>"; };
+		4278B7D9166CD77F00D0FE59 /* AFHTTPModelResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPModelResponse.m; sourceTree = "<group>"; };
 		4278B7DD166CD89A00D0FE59 /* AFDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFDefines.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -167,6 +175,10 @@
 				4278B7C3166B913400D0FE59 /* AFModelDelegate.h */,
 				4278B7C2166B913400D0FE59 /* AFModel.h */,
 				4278B7C4166B913400D0FE59 /* AFModel.m */,
+				4278B7D3166CD28100D0FE59 /* AFHTTPModel.h */,
+				4278B7D4166CD28100D0FE59 /* AFHTTPModel.m */,
+				4278B7D8166CD77F00D0FE59 /* AFHTTPModelResponse.h */,
+				4278B7D9166CD77F00D0FE59 /* AFHTTPModelResponse.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -274,6 +286,8 @@
 				4278B793166B85E800D0FE59 /* AFKit.m in Sources */,
 				4278B7C5166B913400D0FE59 /* AFModel.m in Sources */,
 				4278B7C9166CC8CB00D0FE59 /* AFModelViewController.m in Sources */,
+				4278B7D5166CD28100D0FE59 /* AFHTTPModel.m in Sources */,
+				4278B7DA166CD77F00D0FE59 /* AFHTTPModelResponse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +300,8 @@
 				4278B7B9166B862D00D0FE59 /* AFKit.m in Sources */,
 				4278B7C6166B913400D0FE59 /* AFModel.m in Sources */,
 				4278B7CA166CC8CB00D0FE59 /* AFModelViewController.m in Sources */,
+				4278B7D6166CD28100D0FE59 /* AFHTTPModel.m in Sources */,
+				4278B7DB166CD77F00D0FE59 /* AFHTTPModelResponse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +434,7 @@
 				4278B798166B85E800D0FE59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4278B7B6166B860800D0FE59 /* Build configuration list for PBXNativeTarget "AFKitDemo" */ = {
 			isa = XCConfigurationList;
