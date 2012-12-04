@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4278B78C166B85E800D0FE59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4278B78B166B85E800D0FE59 /* Foundation.framework */; };
-		4278B791166B85E800D0FE59 /* AFKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4278B790166B85E800D0FE59 /* AFKit.h */; };
-		4278B793166B85E800D0FE59 /* AFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B792166B85E800D0FE59 /* AFKit.m */; };
+		4278B791166B85E800D0FE59 /* CCKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4278B790166B85E800D0FE59 /* CCKit.h */; };
+		4278B793166B85E800D0FE59 /* CCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B792166B85E800D0FE59 /* CCKit.m */; };
 		4278B7A0166B860800D0FE59 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4278B79F166B860800D0FE59 /* UIKit.framework */; };
 		4278B7A1166B860800D0FE59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4278B78B166B85E800D0FE59 /* Foundation.framework */; };
 		4278B7A3166B860800D0FE59 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4278B7A2166B860800D0FE59 /* CoreGraphics.framework */; };
@@ -19,15 +19,15 @@
 		4278B7B1166B860800D0FE59 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4278B7B0166B860800D0FE59 /* Default.png */; };
 		4278B7B3166B860800D0FE59 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4278B7B2166B860800D0FE59 /* Default@2x.png */; };
 		4278B7B5166B860800D0FE59 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4278B7B4166B860800D0FE59 /* Default-568h@2x.png */; };
-		4278B7B9166B862D00D0FE59 /* AFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B792166B85E800D0FE59 /* AFKit.m */; };
-		4278B7C5166B913400D0FE59 /* AFModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B7C4166B913400D0FE59 /* AFModel.m */; };
-		4278B7C6166B913400D0FE59 /* AFModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B7C4166B913400D0FE59 /* AFModel.m */; };
-		4278B7C9166CC8CB00D0FE59 /* AFModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B7C8166CC8CB00D0FE59 /* AFModelViewController.m */; };
-		4278B7CA166CC8CB00D0FE59 /* AFModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B7C8166CC8CB00D0FE59 /* AFModelViewController.m */; };
-		4278B7D5166CD28100D0FE59 /* AFHTTPModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B7D4166CD28100D0FE59 /* AFHTTPModel.m */; };
-		4278B7D6166CD28100D0FE59 /* AFHTTPModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B7D4166CD28100D0FE59 /* AFHTTPModel.m */; };
-		4278B7DA166CD77F00D0FE59 /* AFHTTPModelResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B7D9166CD77F00D0FE59 /* AFHTTPModelResponse.m */; };
-		4278B7DB166CD77F00D0FE59 /* AFHTTPModelResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B7D9166CD77F00D0FE59 /* AFHTTPModelResponse.m */; };
+		4278B7B9166B862D00D0FE59 /* CCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B792166B85E800D0FE59 /* CCKit.m */; };
+		4278B7C5166B913400D0FE59 /* CCModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B7C4166B913400D0FE59 /* CCModel.m */; };
+		4278B7C6166B913400D0FE59 /* CCModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B7C4166B913400D0FE59 /* CCModel.m */; };
+		4278B7C9166CC8CB00D0FE59 /* CCModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B7C8166CC8CB00D0FE59 /* CCModelViewController.m */; };
+		4278B7CA166CC8CB00D0FE59 /* CCModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B7C8166CC8CB00D0FE59 /* CCModelViewController.m */; };
+		4278B7D5166CD28100D0FE59 /* CCHTTPModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B7D4166CD28100D0FE59 /* CCHTTPModel.m */; };
+		4278B7D6166CD28100D0FE59 /* CCHTTPModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B7D4166CD28100D0FE59 /* CCHTTPModel.m */; };
+		4278B7DA166CD77F00D0FE59 /* CCHTTPModelResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B7D9166CD77F00D0FE59 /* CCHTTPModelResponse.m */; };
+		4278B7DB166CD77F00D0FE59 /* CCHTTPModelResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B7D9166CD77F00D0FE59 /* CCHTTPModelResponse.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,40 +37,40 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
-				4278B791166B85E800D0FE59 /* AFKit.h in CopyFiles */,
+				4278B791166B85E800D0FE59 /* CCKit.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4278B788166B85E800D0FE59 /* libAFKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAFKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4278B788166B85E800D0FE59 /* libCCKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCCKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4278B78B166B85E800D0FE59 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		4278B78F166B85E800D0FE59 /* AFKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AFKit-Prefix.pch"; sourceTree = "<group>"; };
-		4278B790166B85E800D0FE59 /* AFKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFKit.h; sourceTree = "<group>"; };
-		4278B792166B85E800D0FE59 /* AFKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFKit.m; sourceTree = "<group>"; };
-		4278B79D166B860800D0FE59 /* AFKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AFKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4278B78F166B85E800D0FE59 /* CCKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CCKit-Prefix.pch"; sourceTree = "<group>"; };
+		4278B790166B85E800D0FE59 /* CCKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCKit.h; sourceTree = "<group>"; };
+		4278B792166B85E800D0FE59 /* CCKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCKit.m; sourceTree = "<group>"; };
+		4278B79D166B860800D0FE59 /* CCKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4278B79F166B860800D0FE59 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4278B7A2166B860800D0FE59 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		4278B7A6166B860800D0FE59 /* AFKitDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AFKitDemo-Info.plist"; sourceTree = "<group>"; };
+		4278B7A6166B860800D0FE59 /* CCKitDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CCKitDemo-Info.plist"; sourceTree = "<group>"; };
 		4278B7A8166B860800D0FE59 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4278B7AA166B860800D0FE59 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4278B7AC166B860800D0FE59 /* AFKitDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AFKitDemo-Prefix.pch"; sourceTree = "<group>"; };
+		4278B7AC166B860800D0FE59 /* CCKitDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CCKitDemo-Prefix.pch"; sourceTree = "<group>"; };
 		4278B7AD166B860800D0FE59 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4278B7AE166B860800D0FE59 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4278B7B0166B860800D0FE59 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		4278B7B2166B860800D0FE59 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		4278B7B4166B860800D0FE59 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		4278B7C2166B913400D0FE59 /* AFModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFModel.h; sourceTree = "<group>"; };
-		4278B7C3166B913400D0FE59 /* AFModelDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFModelDelegate.h; sourceTree = "<group>"; };
-		4278B7C4166B913400D0FE59 /* AFModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFModel.m; sourceTree = "<group>"; };
-		4278B7C7166CC8CB00D0FE59 /* AFModelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFModelViewController.h; sourceTree = "<group>"; };
-		4278B7C8166CC8CB00D0FE59 /* AFModelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFModelViewController.m; sourceTree = "<group>"; };
-		4278B7D3166CD28100D0FE59 /* AFHTTPModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPModel.h; sourceTree = "<group>"; };
-		4278B7D4166CD28100D0FE59 /* AFHTTPModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPModel.m; sourceTree = "<group>"; };
-		4278B7D8166CD77F00D0FE59 /* AFHTTPModelResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPModelResponse.h; sourceTree = "<group>"; };
-		4278B7D9166CD77F00D0FE59 /* AFHTTPModelResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPModelResponse.m; sourceTree = "<group>"; };
-		4278B7DD166CD89A00D0FE59 /* AFDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFDefines.h; sourceTree = "<group>"; };
+		4278B7C2166B913400D0FE59 /* CCModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCModel.h; sourceTree = "<group>"; };
+		4278B7C3166B913400D0FE59 /* CCModelDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCModelDelegate.h; sourceTree = "<group>"; };
+		4278B7C4166B913400D0FE59 /* CCModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCModel.m; sourceTree = "<group>"; };
+		4278B7C7166CC8CB00D0FE59 /* CCModelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCModelViewController.h; sourceTree = "<group>"; };
+		4278B7C8166CC8CB00D0FE59 /* CCModelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCModelViewController.m; sourceTree = "<group>"; };
+		4278B7D3166CD28100D0FE59 /* CCHTTPModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCHTTPModel.h; sourceTree = "<group>"; };
+		4278B7D4166CD28100D0FE59 /* CCHTTPModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCHTTPModel.m; sourceTree = "<group>"; };
+		4278B7D8166CD77F00D0FE59 /* CCHTTPModelResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCHTTPModelResponse.h; sourceTree = "<group>"; };
+		4278B7D9166CD77F00D0FE59 /* CCHTTPModelResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCHTTPModelResponse.m; sourceTree = "<group>"; };
+		4278B7DD166CD89A00D0FE59 /* CCDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCDefines.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +98,8 @@
 		4278B77D166B85E800D0FE59 = {
 			isa = PBXGroup;
 			children = (
-				4278B78D166B85E800D0FE59 /* AFKit */,
-				4278B7A4166B860800D0FE59 /* AFKitDemo */,
+				4278B78D166B85E800D0FE59 /* CCKit */,
+				4278B7A4166B860800D0FE59 /* CCKitDemo */,
 				4278B78A166B85E800D0FE59 /* Frameworks */,
 				4278B789166B85E800D0FE59 /* Products */,
 			);
@@ -108,8 +108,8 @@
 		4278B789166B85E800D0FE59 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4278B788166B85E800D0FE59 /* libAFKit.a */,
-				4278B79D166B860800D0FE59 /* AFKitDemo.app */,
+				4278B788166B85E800D0FE59 /* libCCKit.a */,
+				4278B79D166B860800D0FE59 /* CCKitDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -124,44 +124,44 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4278B78D166B85E800D0FE59 /* AFKit */ = {
+		4278B78D166B85E800D0FE59 /* CCKit */ = {
 			isa = PBXGroup;
 			children = (
 				4278B7DC166CD87000D0FE59 /* Common */,
 				4278B7C1166B912400D0FE59 /* Model */,
 				4278B7D2166CD23100D0FE59 /* View Controllers */,
-				4278B790166B85E800D0FE59 /* AFKit.h */,
-				4278B792166B85E800D0FE59 /* AFKit.m */,
+				4278B790166B85E800D0FE59 /* CCKit.h */,
+				4278B792166B85E800D0FE59 /* CCKit.m */,
 				4278B78E166B85E800D0FE59 /* Supporting Files */,
 			);
-			path = AFKit;
+			path = CCKit;
 			sourceTree = "<group>";
 		};
 		4278B78E166B85E800D0FE59 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				4278B78F166B85E800D0FE59 /* AFKit-Prefix.pch */,
+				4278B78F166B85E800D0FE59 /* CCKit-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		4278B7A4166B860800D0FE59 /* AFKitDemo */ = {
+		4278B7A4166B860800D0FE59 /* CCKitDemo */ = {
 			isa = PBXGroup;
 			children = (
 				4278B7AD166B860800D0FE59 /* AppDelegate.h */,
 				4278B7AE166B860800D0FE59 /* AppDelegate.m */,
 				4278B7A5166B860800D0FE59 /* Supporting Files */,
 			);
-			path = AFKitDemo;
+			path = CCKitDemo;
 			sourceTree = "<group>";
 		};
 		4278B7A5166B860800D0FE59 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				4278B7A6166B860800D0FE59 /* AFKitDemo-Info.plist */,
+				4278B7A6166B860800D0FE59 /* CCKitDemo-Info.plist */,
 				4278B7A7166B860800D0FE59 /* InfoPlist.strings */,
 				4278B7AA166B860800D0FE59 /* main.m */,
-				4278B7AC166B860800D0FE59 /* AFKitDemo-Prefix.pch */,
+				4278B7AC166B860800D0FE59 /* CCKitDemo-Prefix.pch */,
 				4278B7B0166B860800D0FE59 /* Default.png */,
 				4278B7B2166B860800D0FE59 /* Default@2x.png */,
 				4278B7B4166B860800D0FE59 /* Default-568h@2x.png */,
@@ -172,13 +172,13 @@
 		4278B7C1166B912400D0FE59 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4278B7C3166B913400D0FE59 /* AFModelDelegate.h */,
-				4278B7C2166B913400D0FE59 /* AFModel.h */,
-				4278B7C4166B913400D0FE59 /* AFModel.m */,
-				4278B7D3166CD28100D0FE59 /* AFHTTPModel.h */,
-				4278B7D4166CD28100D0FE59 /* AFHTTPModel.m */,
-				4278B7D8166CD77F00D0FE59 /* AFHTTPModelResponse.h */,
-				4278B7D9166CD77F00D0FE59 /* AFHTTPModelResponse.m */,
+				4278B7C3166B913400D0FE59 /* CCModelDelegate.h */,
+				4278B7C2166B913400D0FE59 /* CCModel.h */,
+				4278B7C4166B913400D0FE59 /* CCModel.m */,
+				4278B7D3166CD28100D0FE59 /* CCHTTPModel.h */,
+				4278B7D4166CD28100D0FE59 /* CCHTTPModel.m */,
+				4278B7D8166CD77F00D0FE59 /* CCHTTPModelResponse.h */,
+				4278B7D9166CD77F00D0FE59 /* CCHTTPModelResponse.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -186,8 +186,8 @@
 		4278B7D2166CD23100D0FE59 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4278B7C7166CC8CB00D0FE59 /* AFModelViewController.h */,
-				4278B7C8166CC8CB00D0FE59 /* AFModelViewController.m */,
+				4278B7C7166CC8CB00D0FE59 /* CCModelViewController.h */,
+				4278B7C8166CC8CB00D0FE59 /* CCModelViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -195,7 +195,7 @@
 		4278B7DC166CD87000D0FE59 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				4278B7DD166CD89A00D0FE59 /* AFDefines.h */,
+				4278B7DD166CD89A00D0FE59 /* CCDefines.h */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -203,9 +203,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4278B787166B85E800D0FE59 /* AFKit */ = {
+		4278B787166B85E800D0FE59 /* CCKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4278B796166B85E800D0FE59 /* Build configuration list for PBXNativeTarget "AFKit" */;
+			buildConfigurationList = 4278B796166B85E800D0FE59 /* Build configuration list for PBXNativeTarget "CCKit" */;
 			buildPhases = (
 				4278B784166B85E800D0FE59 /* Sources */,
 				4278B785166B85E800D0FE59 /* Frameworks */,
@@ -215,14 +215,14 @@
 			);
 			dependencies = (
 			);
-			name = AFKit;
-			productName = AFKit;
-			productReference = 4278B788166B85E800D0FE59 /* libAFKit.a */;
+			name = CCKit;
+			productName = CCKit;
+			productReference = 4278B788166B85E800D0FE59 /* libCCKit.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		4278B79C166B860700D0FE59 /* AFKitDemo */ = {
+		4278B79C166B860700D0FE59 /* CCKitDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4278B7B6166B860800D0FE59 /* Build configuration list for PBXNativeTarget "AFKitDemo" */;
+			buildConfigurationList = 4278B7B6166B860800D0FE59 /* Build configuration list for PBXNativeTarget "CCKitDemo" */;
 			buildPhases = (
 				4278B799166B860700D0FE59 /* Sources */,
 				4278B79A166B860700D0FE59 /* Frameworks */,
@@ -232,9 +232,9 @@
 			);
 			dependencies = (
 			);
-			name = AFKitDemo;
-			productName = AFKitDemo;
-			productReference = 4278B79D166B860800D0FE59 /* AFKitDemo.app */;
+			name = CCKitDemo;
+			productName = CCKitDemo;
+			productReference = 4278B79D166B860800D0FE59 /* CCKitDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -246,7 +246,7 @@
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Cliq Consulting";
 			};
-			buildConfigurationList = 4278B782166B85E800D0FE59 /* Build configuration list for PBXProject "AFKit" */;
+			buildConfigurationList = 4278B782166B85E800D0FE59 /* Build configuration list for PBXProject "CCKit" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -258,8 +258,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4278B787166B85E800D0FE59 /* AFKit */,
-				4278B79C166B860700D0FE59 /* AFKitDemo */,
+				4278B787166B85E800D0FE59 /* CCKit */,
+				4278B79C166B860700D0FE59 /* CCKitDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -283,11 +283,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4278B793166B85E800D0FE59 /* AFKit.m in Sources */,
-				4278B7C5166B913400D0FE59 /* AFModel.m in Sources */,
-				4278B7C9166CC8CB00D0FE59 /* AFModelViewController.m in Sources */,
-				4278B7D5166CD28100D0FE59 /* AFHTTPModel.m in Sources */,
-				4278B7DA166CD77F00D0FE59 /* AFHTTPModelResponse.m in Sources */,
+				4278B793166B85E800D0FE59 /* CCKit.m in Sources */,
+				4278B7C5166B913400D0FE59 /* CCModel.m in Sources */,
+				4278B7C9166CC8CB00D0FE59 /* CCModelViewController.m in Sources */,
+				4278B7D5166CD28100D0FE59 /* CCHTTPModel.m in Sources */,
+				4278B7DA166CD77F00D0FE59 /* CCHTTPModelResponse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,11 +297,11 @@
 			files = (
 				4278B7AB166B860800D0FE59 /* main.m in Sources */,
 				4278B7AF166B860800D0FE59 /* AppDelegate.m in Sources */,
-				4278B7B9166B862D00D0FE59 /* AFKit.m in Sources */,
-				4278B7C6166B913400D0FE59 /* AFModel.m in Sources */,
-				4278B7CA166CC8CB00D0FE59 /* AFModelViewController.m in Sources */,
-				4278B7D6166CD28100D0FE59 /* AFHTTPModel.m in Sources */,
-				4278B7DB166CD77F00D0FE59 /* AFHTTPModelResponse.m in Sources */,
+				4278B7B9166B862D00D0FE59 /* CCKit.m in Sources */,
+				4278B7C6166B913400D0FE59 /* CCModel.m in Sources */,
+				4278B7CA166CC8CB00D0FE59 /* CCModelViewController.m in Sources */,
+				4278B7D6166CD28100D0FE59 /* CCHTTPModel.m in Sources */,
+				4278B7DB166CD77F00D0FE59 /* CCHTTPModelResponse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,9 +369,9 @@
 		4278B797166B85E800D0FE59 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DSTROOT = /tmp/AFKit.dst;
+				DSTROOT = /tmp/CCKit.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AFKit/AFKit-Prefix.pch";
+				GCC_PREFIX_HEADER = "CCKit/CCKit-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -381,9 +381,9 @@
 		4278B798166B85E800D0FE59 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DSTROOT = /tmp/AFKit.dst;
+				DSTROOT = /tmp/CCKit.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AFKit/AFKit-Prefix.pch";
+				GCC_PREFIX_HEADER = "CCKit/CCKit-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -395,8 +395,8 @@
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AFKitDemo/AFKitDemo-Prefix.pch";
-				INFOPLIST_FILE = "AFKitDemo/AFKitDemo-Info.plist";
+				GCC_PREFIX_HEADER = "CCKitDemo/CCKitDemo-Prefix.pch";
+				INFOPLIST_FILE = "CCKitDemo/CCKitDemo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -407,8 +407,8 @@
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AFKitDemo/AFKitDemo-Prefix.pch";
-				INFOPLIST_FILE = "AFKitDemo/AFKitDemo-Info.plist";
+				GCC_PREFIX_HEADER = "CCKitDemo/CCKitDemo-Prefix.pch";
+				INFOPLIST_FILE = "CCKitDemo/CCKitDemo-Info.plist";
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -418,7 +418,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4278B782166B85E800D0FE59 /* Build configuration list for PBXProject "AFKit" */ = {
+		4278B782166B85E800D0FE59 /* Build configuration list for PBXProject "CCKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4278B794166B85E800D0FE59 /* Debug */,
@@ -427,7 +427,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4278B796166B85E800D0FE59 /* Build configuration list for PBXNativeTarget "AFKit" */ = {
+		4278B796166B85E800D0FE59 /* Build configuration list for PBXNativeTarget "CCKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4278B797166B85E800D0FE59 /* Debug */,
@@ -436,7 +436,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4278B7B6166B860800D0FE59 /* Build configuration list for PBXNativeTarget "AFKitDemo" */ = {
+		4278B7B6166B860800D0FE59 /* Build configuration list for PBXNativeTarget "CCKitDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4278B7B7166B860800D0FE59 /* Debug */,

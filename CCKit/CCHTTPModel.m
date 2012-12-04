@@ -1,14 +1,14 @@
 //
-//  AFHTTPModel.m
-//  AFKit
+//  CCHTTPModel.m
+//  CCKit
 //
 //  Created by Leonardo Lobato on 12/3/12.
 //  Copyright (c) 2012 Cliq Consulting. All rights reserved.
 //
 
-#import "AFHTTPModel.h"
+#import "CCHTTPModel.h"
 
-@interface AFHTTPModel ()
+@interface CCHTTPModel ()
 
 @property (nonatomic, readonly) NSString *baseUrl;
 @property (nonatomic, readonly) NSString *resource;
@@ -17,7 +17,7 @@
 
 @end
 
-@implementation AFHTTPModel
+@implementation CCHTTPModel
 
 - (id)init
 {
@@ -152,9 +152,9 @@
     return queryStringParameters;
 }
 
-- (AFHTTPModelResponse *)newResponseObject;
+- (CCHTTPModelResponse *)newResponseObject;
 {
-    return [[AFHTTPModelResponse alloc] init];
+    return [[CCHTTPModelResponse alloc] init];
 }
 
 #pragma mark Public
@@ -184,7 +184,7 @@
     // TODO: cache policy
 
 	if ([self isLoading]) {
-        AFLog(@"Model request already in progress: %@", self);
+        CCLog(@"Model request already in progress: %@", self);
         return;
     }
     
@@ -208,8 +208,8 @@
 	// Test the resulting URL
     NSURL *url = [NSURL URLWithString:urlString];
 	if (!url) {
-        NSError *error = [NSError errorWithDomain:kAFModelErrorDomain
-											 code:kAFModelErrorCodeInternal
+        NSError *error = [NSError errorWithDomain:kCCModelErrorDomain
+											 code:kCCModelErrorCodeInternal
 										 userInfo:[NSDictionary dictionaryWithObject:@"Unable to create request URL." forKey:NSLocalizedDescriptionKey]];
 		[self didFailLoadWithError:error];
         return;
@@ -217,7 +217,7 @@
 	
 	NSString *method = [self requestMethod];
 	
-    AFLog(@"Request URL (%@): %@", method, url);
+    CCLog(@"Request URL (%@): %@", method, url);
     
 	// Make request.
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url
@@ -233,7 +233,7 @@
                 [request setValue:self.contentType forHTTPHeaderField:@"content-type"];
             }
             
-            AFLog(@"POST body:\n%@", paramsString);
+            CCLog(@"POST body:\n%@", paramsString);
             NSData *httpBody = [paramsString dataUsingEncoding:NSUTF8StringEncoding];
             
             [request setHTTPBody:httpBody];
@@ -265,7 +265,7 @@
     [_connection start];
 }
 
-#pragma mark - AFModel
+#pragma mark - CCModel
 
 - (BOOL)isLoading;
 {

@@ -1,6 +1,6 @@
 //
-//  AFHTTPModelResponse.h
-//  AFKit
+//  CCHTTPModelResponse.h
+//  CCKit
 //
 //  Created by Leonardo Lobato on 12/3/12.
 //  Copyright (c) 2012 Cliq Consulting. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface AFHTTPModelResponse : NSObject
+@interface CCHTTPModelResponse : NSObject
 
 @property (nonatomic, assign) NSInteger statusCode;
 @property (nonatomic, retain) NSError *lastError;

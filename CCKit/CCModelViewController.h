@@ -1,6 +1,6 @@
 //
-//  AFModelViewController.h
-//  AFKit
+//  CCModelViewController.h
+//  CCKit
 //
 //  Created by Leonardo Lobato on 12/3/12.
 //  Copyright (c) 2012 Cliq Consulting. All rights reserved.
@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-#import "AFModel.h"
+#import "CCModel.h"
 
-@interface AFModelViewController : UIViewController <AFModelDelegate> {
+@interface CCModelViewController : UIViewController <CCModelDelegate> {
     
     BOOL _isViewAppearing;
     BOOL _hasViewAppeared;
@@ -31,9 +31,9 @@
     } _flags;
 }
 
-@property (nonatomic, retain) id<AFModel> model;
+@property (nonatomic, retain) id<CCModel> model;
 
-- (id<AFModel>)newModel;
+- (id<CCModel>)newModel;
 
 @property (nonatomic, retain) NSError* modelError;
 

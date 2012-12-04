@@ -1,14 +1,14 @@
 //
-//  AFHTTPModelResponse.m
-//  AFKit
+//  CCHTTPModelResponse.m
+//  CCKit
 //
 //  Created by Leonardo Lobato on 12/3/12.
 //  Copyright (c) 2012 Cliq Consulting. All rights reserved.
 //
 
-#import "AFHTTPModelResponse.h"
+#import "CCHTTPModelResponse.h"
 
-@implementation AFHTTPModelResponse
+@implementation CCHTTPModelResponse
 
 @synthesize parsedResponse = _parsedResponse;
 
@@ -45,8 +45,8 @@
     if (!jsonBody) {
         // Not a valid JSON string.
         NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-        AFLog(@"Invalid server response:\n%@", responseString);
-        NSError *error = [NSError errorWithDomain:kAFModelErrorHTTPDomain
+        CCLog(@"Invalid server response:\n%@", responseString);
+        NSError *error = [NSError errorWithDomain:kCCModelErrorHTTPDomain
                                              code:_statusCode
                                          userInfo:[NSDictionary dictionaryWithObject:@"Invalid server response."
                                                                               forKey:NSLocalizedDescriptionKey]];
@@ -59,9 +59,9 @@
             self.lastError = [self parseJSON:jsonBody];
             
         } @catch (NSException *e) {
-            AFDebug(@"Error parsing JSON object: %@", e);
-            NSError *error = [NSError errorWithDomain:kAFModelErrorDomain
-                                                 code:kAFModelErrorCodeInternal
+            CCDebug(@"Error parsing JSON object: %@", e);
+            NSError *error = [NSError errorWithDomain:kCCModelErrorDomain
+                                                 code:kCCModelErrorCodeInternal
                                              userInfo:[NSDictionary dictionaryWithObject:@"Couldn't parse server response."
                                                                                   forKey:NSLocalizedDescriptionKey]];
             self.lastError = error;

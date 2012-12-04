@@ -1,17 +1,17 @@
 //
-//  AFModel.h
-//  AFKit
+//  CCModel.h
+//  CCKit
 //
 //  Created by Leonardo Lobato on 12/2/12.
 //  Copyright (c) 2012 Cliq Consulting. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "AFModelDelegate.h"
+#import "CCModelDelegate.h"
 
-@protocol AFModel <NSObject>
+@protocol CCModel <NSObject>
 
-@property (nonatomic, readonly) NSMutableArray *delegates; // AFModelDelegate
+@property (nonatomic, readonly) NSMutableArray *delegates; // CCModelDelegate
 
 - (BOOL)isLoaded;
 - (BOOL)isLoading;
@@ -28,7 +28,7 @@
 
 @end
 
-@interface AFModel : NSObject <AFModel>
+@interface CCModel : NSObject <CCModel>
 
 // Notify delegates:
 - (void)didStartLoad;
@@ -45,7 +45,7 @@
 @end
 
 // TODO: declare protected methods on separate header
-@interface AFModel (Protected)
+@interface CCModel (Protected)
 
 - (void)delegatePerformSelector:(SEL)selector withObject:(id)object1;
 - (void)delegatePerformSelector:(SEL)selector withObject:(id)object1 withObject:(id)object2;

@@ -1,16 +1,16 @@
 //
-//  AFHTTPModel.h
-//  AFKit
+//  CCHTTPModel.h
+//  CCKit
 //
 //  Created by Leonardo Lobato on 12/3/12.
 //  Copyright (c) 2012 Cliq Consulting. All rights reserved.
 //
 
-#import "AFModel.h"
+#import "CCModel.h"
 
-#import "AFHTTPModelResponse.h"
+#import "CCHTTPModelResponse.h"
 
-@interface AFHTTPModel : AFModel {
+@interface CCHTTPModel : CCModel {
     BOOL _isOutdated;
     BOOL _isLoadingMore;
     BOOL _isLoaded;
@@ -22,7 +22,7 @@
 @property (nonatomic, assign) NSTimeInterval timeoutInterval;
 
 @property (nonatomic, retain) NSOperationQueue *requestQueue;
-@property (nonatomic, retain) AFHTTPModelResponse *response;
+@property (nonatomic, retain) CCHTTPModelResponse *response;
 
 // Protected:
 @property (nonatomic, readonly) NSURLConnection *connection;

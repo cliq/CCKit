@@ -1,0 +1,8 @@
+//
+// Prefix header for all source files of the 'CCKit' target in the 'CCKit' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import "CCDefines.h"
+#endif

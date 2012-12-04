@@ -1,18 +1,18 @@
 //
-//  AFModelViewController.m
-//  AFKit
+//  CCModelViewController.m
+//  CCKit
 //
 //  Created by Leonardo Lobato on 12/3/12.
 //  Copyright (c) 2012 Cliq Consulting. All rights reserved.
 //
 
-#import "AFModelViewController.h"
+#import "CCModelViewController.h"
 
-@interface AFModelViewController (Protected)
-- (id<AFModel>)newInterstitialModel;
+@interface CCModelViewController (Protected)
+- (id<CCModel>)newInterstitialModel;
 @end
 
-@implementation AFModelViewController
+@implementation CCModelViewController
 
 @synthesize model = _model;
 
@@ -182,7 +182,7 @@
 
 #pragma mark - Public
 
-- (id<AFModel>)model {
+- (id<CCModel>)model {
     if (!_model) {
         _model = [self newModel];
     }
@@ -190,7 +190,7 @@
 }
 
 
-- (void)setModel:(id<AFModel>)model {
+- (void)setModel:(id<CCModel>)model {
     if (_model != model) {
         [_model.delegates removeObject:self];
         _model = model;
@@ -332,9 +332,9 @@
     }
 }
 
-#pragma mark - AFModelDelegate
+#pragma mark - CCModelDelegate
 
-- (void)modelDidStartLoad:(id<AFModel>)model {
+- (void)modelDidStartLoad:(id<CCModel>)model {
     if (model == self.model) {
         _flags.isModelWillLoadInvalid = YES;
         _flags.isModelDidLoadFirstTimeInvalid = YES;
@@ -343,7 +343,7 @@
 }
 
 
-- (void)modelDidFinishLoad:(id<AFModel>)model {
+- (void)modelDidFinishLoad:(id<CCModel>)model {
     if (model == _model) {
         _modelError = nil;
         _flags.isModelDidLoadInvalid = YES;
@@ -352,35 +352,35 @@
 }
 
 
-- (void)model:(id<AFModel>)model didFailLoadWithError:(NSError*)error {
+- (void)model:(id<CCModel>)model didFailLoadWithError:(NSError*)error {
     if (model == _model) {
         self.modelError = error;
     }
 }
 
 
-- (void)modelDidCancelLoad:(id<AFModel>)model {
+- (void)modelDidCancelLoad:(id<CCModel>)model {
     if (model == _model) {
         [self invalidateView];
     }
 }
 
 
-- (void)modelDidChange:(id<AFModel>)model {
+- (void)modelDidChange:(id<CCModel>)model {
     if (model == _model) {
         [self refresh];
     }
 }
 
 
-- (void)modelDidBeginUpdates:(id<AFModel>)model {
+- (void)modelDidBeginUpdates:(id<CCModel>)model {
     if (model == _model) {
         [self beginUpdates];
     }
 }
 
 
-- (void)modelDidEndUpdates:(id<AFModel>)model {
+- (void)modelDidEndUpdates:(id<CCModel>)model {
     if (model == _model) {
         [self endUpdates];
     }
@@ -388,9 +388,9 @@
 
 #pragma mark - Subclasses should implement
 
-- (AFModel *)newModel;
+- (CCModel *)newModel;
 {
-    return [[AFModel alloc] init];
+    return [[CCModel alloc] init];
 }
 
 - (void)showLoading:(BOOL)show {
@@ -424,15 +424,15 @@
 - (void)didShowModel:(BOOL)firstTime {
 }
 
-- (void)model:(id<AFModel>)model didUpdateObject:(id)object atIndexPath:(NSIndexPath*)indexPath {
+- (void)model:(id<CCModel>)model didUpdateObject:(id)object atIndexPath:(NSIndexPath*)indexPath {
 }
 
 
-- (void)model:(id<AFModel>)model didInsertObject:(id)object atIndexPath:(NSIndexPath*)indexPath {
+- (void)model:(id<CCModel>)model didInsertObject:(id)object atIndexPath:(NSIndexPath*)indexPath {
 }
 
 
-- (void)model:(id<AFModel>)model didDeleteObject:(id)object atIndexPath:(NSIndexPath*)indexPath {
+- (void)model:(id<CCModel>)model didDeleteObject:(id)object atIndexPath:(NSIndexPath*)indexPath {
 }
 
 

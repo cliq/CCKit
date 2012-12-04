@@ -1,14 +1,14 @@
 //
-//  AFModel.m
-//  AFKit
+//  CCModel.m
+//  CCKit
 //
 //  Created by Leonardo Lobato on 12/2/12.
 //  Copyright (c) 2012 Cliq Consulting. All rights reserved.
 //
 
-#import "AFModel.h"
+#import "CCModel.h"
 
-@implementation AFModel
+@implementation CCModel
 
 @synthesize delegates = _delegates;
 
@@ -90,16 +90,16 @@
 
 #pragma mark - Delegates
 
-static const void* AFRetainNoOp(CFAllocatorRef allocator, const void *value) { return value; }
-static void AFReleaseNoOp(CFAllocatorRef allocator, const void *value) { }
+static const void* CCRetainNoOp(CFAllocatorRef allocator, const void *value) { return value; }
+static void CCReleaseNoOp(CFAllocatorRef allocator, const void *value) { }
 
 - (NSMutableArray *)delegates;
 {
     // Creates a non-retaining array
     if (!_delegates) {
         CFArrayCallBacks callbacks = kCFTypeArrayCallBacks;
-        callbacks.retain = AFRetainNoOp;
-        callbacks.release = AFReleaseNoOp;
+        callbacks.retain = CCRetainNoOp;
+        callbacks.release = CCReleaseNoOp;
         
         // TODO: validate memory management on ARC
 //        return (NSMutableArray*)CFArrayCreateMutable(nil, 0, &callbacks);
