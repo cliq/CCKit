@@ -22,6 +22,8 @@
 		4278B7B9166B862D00D0FE59 /* AFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B792166B85E800D0FE59 /* AFKit.m */; };
 		4278B7C5166B913400D0FE59 /* AFModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B7C4166B913400D0FE59 /* AFModel.m */; };
 		4278B7C6166B913400D0FE59 /* AFModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B7C4166B913400D0FE59 /* AFModel.m */; };
+		4278B7C9166CC8CB00D0FE59 /* AFModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B7C8166CC8CB00D0FE59 /* AFModelViewController.m */; };
+		4278B7CA166CC8CB00D0FE59 /* AFModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B7C8166CC8CB00D0FE59 /* AFModelViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -58,6 +60,9 @@
 		4278B7C2166B913400D0FE59 /* AFModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFModel.h; sourceTree = "<group>"; };
 		4278B7C3166B913400D0FE59 /* AFModelDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFModelDelegate.h; sourceTree = "<group>"; };
 		4278B7C4166B913400D0FE59 /* AFModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFModel.m; sourceTree = "<group>"; };
+		4278B7C7166CC8CB00D0FE59 /* AFModelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFModelViewController.h; sourceTree = "<group>"; };
+		4278B7C8166CC8CB00D0FE59 /* AFModelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFModelViewController.m; sourceTree = "<group>"; };
+		4278B7DD166CD89A00D0FE59 /* AFDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFDefines.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +119,9 @@
 		4278B78D166B85E800D0FE59 /* AFKit */ = {
 			isa = PBXGroup;
 			children = (
+				4278B7DC166CD87000D0FE59 /* Common */,
 				4278B7C1166B912400D0FE59 /* Model */,
+				4278B7D2166CD23100D0FE59 /* View Controllers */,
 				4278B790166B85E800D0FE59 /* AFKit.h */,
 				4278B792166B85E800D0FE59 /* AFKit.m */,
 				4278B78E166B85E800D0FE59 /* Supporting Files */,
@@ -162,6 +169,23 @@
 				4278B7C4166B913400D0FE59 /* AFModel.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		4278B7D2166CD23100D0FE59 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4278B7C7166CC8CB00D0FE59 /* AFModelViewController.h */,
+				4278B7C8166CC8CB00D0FE59 /* AFModelViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		4278B7DC166CD87000D0FE59 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4278B7DD166CD89A00D0FE59 /* AFDefines.h */,
+			);
+			name = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +273,7 @@
 			files = (
 				4278B793166B85E800D0FE59 /* AFKit.m in Sources */,
 				4278B7C5166B913400D0FE59 /* AFModel.m in Sources */,
+				4278B7C9166CC8CB00D0FE59 /* AFModelViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +285,7 @@
 				4278B7AF166B860800D0FE59 /* AppDelegate.m in Sources */,
 				4278B7B9166B862D00D0FE59 /* AFKit.m in Sources */,
 				4278B7C6166B913400D0FE59 /* AFModel.m in Sources */,
+				4278B7CA166CC8CB00D0FE59 /* AFModelViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +426,7 @@
 				4278B7B8166B860800D0FE59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
