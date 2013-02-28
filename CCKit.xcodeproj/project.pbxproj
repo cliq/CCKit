@@ -46,7 +46,7 @@
 /* Begin PBXFileReference section */
 		4278B788166B85E800D0FE59 /* libCCKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCCKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4278B78B166B85E800D0FE59 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		4278B78F166B85E800D0FE59 /* CCKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CCKit-Prefix.pch"; sourceTree = "<group>"; };
+		4278B78F166B85E800D0FE59 /* CCKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CCKit-Prefix.pch"; path = "../CCKit-Prefix.pch"; sourceTree = "<group>"; };
 		4278B790166B85E800D0FE59 /* CCKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCKit.h; sourceTree = "<group>"; };
 		4278B792166B85E800D0FE59 /* CCKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCKit.m; sourceTree = "<group>"; };
 		4278B79D166B860800D0FE59 /* CCKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +100,7 @@
 			children = (
 				4278B78D166B85E800D0FE59 /* CCKit */,
 				4278B7A4166B860800D0FE59 /* CCKitDemo */,
+				4278B78E166B85E800D0FE59 /* Supporting Files */,
 				4278B78A166B85E800D0FE59 /* Frameworks */,
 				4278B789166B85E800D0FE59 /* Products */,
 			);
@@ -132,7 +133,6 @@
 				4278B7D2166CD23100D0FE59 /* View Controllers */,
 				4278B790166B85E800D0FE59 /* CCKit.h */,
 				4278B792166B85E800D0FE59 /* CCKit.m */,
-				4278B78E166B85E800D0FE59 /* Supporting Files */,
 			);
 			path = CCKit;
 			sourceTree = "<group>";
@@ -143,6 +143,7 @@
 				4278B78F166B85E800D0FE59 /* CCKit-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			path = CCKit;
 			sourceTree = "<group>";
 		};
 		4278B7A4166B860800D0FE59 /* CCKitDemo */ = {
