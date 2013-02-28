@@ -35,6 +35,23 @@
 #define CCiPhone568ImageNamed(image) ([UIImage imageNamed:CCiPhone568NameForImage(image)])
 
 
+#pragma mark - CC Singleton
+
+#define CC_SINGLETON_INTERFACE(CLASSNAME)  \
++ (CLASSNAME *)sharedInstance;
+
+#define CC_SINGLETON_IMPLEMENTATION(CLASSNAME)      \
+\
++(CLASSNAME *)sharedInstance {                      \
+static dispatch_once_t pred;                    \
+static CLASSNAME *shared = nil;                 \
+dispatch_once(&pred, ^{                         \
+shared = [[CLASSNAME alloc] init];          \
+});                                             \
+return shared;                                  \
+}
+
+
 #pragma mark - Constants
 
 #pragma mark Model error
