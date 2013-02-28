@@ -36,6 +36,56 @@
 	// Do any additional setup after loading the view.
 }
 
+#pragma mark - Subclasses should implement
+
+- (CCModel *)newModel;
+{
+    return [[CCModel alloc] init];
+}
+
+- (void)showLoading:(BOOL)show {
+}
+
+
+- (void)showModel:(BOOL)show {
+}
+
+
+- (void)showEmpty:(BOOL)show {
+}
+
+
+- (void)showError:(BOOL)show {
+}
+
+
+- (void)didRefreshModel {
+}
+
+
+- (void)willLoadModel {
+}
+
+
+- (void)didLoadModel:(BOOL)firstTime {
+}
+
+
+- (void)didShowModel:(BOOL)firstTime {
+}
+
+- (void)model:(id<CCModel>)model didUpdateObject:(id)object atIndexPath:(NSIndexPath*)indexPath {
+}
+
+
+- (void)model:(id<CCModel>)model didInsertObject:(id)object atIndexPath:(NSIndexPath*)indexPath {
+}
+
+
+- (void)model:(id<CCModel>)model didDeleteObject:(id)object atIndexPath:(NSIndexPath*)indexPath {
+}
+
+
 #pragma mark -
 #pragma mark Private
 
@@ -184,7 +234,7 @@
 
 - (id<CCModel>)model {
     if (!_model) {
-        _model = [self newModel];
+        [self setModel:[self newModel]];
     }
     return _model;
 }
@@ -385,55 +435,5 @@
         [self endUpdates];
     }
 }
-
-#pragma mark - Subclasses should implement
-
-- (CCModel *)newModel;
-{
-    return [[CCModel alloc] init];
-}
-
-- (void)showLoading:(BOOL)show {
-}
-
-
-- (void)showModel:(BOOL)show {
-}
-
-
-- (void)showEmpty:(BOOL)show {
-}
-
-
-- (void)showError:(BOOL)show {
-}
-
-
-- (void)didRefreshModel {
-}
-
-
-- (void)willLoadModel {
-}
-
-
-- (void)didLoadModel:(BOOL)firstTime {
-}
-
-
-- (void)didShowModel:(BOOL)firstTime {
-}
-
-- (void)model:(id<CCModel>)model didUpdateObject:(id)object atIndexPath:(NSIndexPath*)indexPath {
-}
-
-
-- (void)model:(id<CCModel>)model didInsertObject:(id)object atIndexPath:(NSIndexPath*)indexPath {
-}
-
-
-- (void)model:(id<CCModel>)model didDeleteObject:(id)object atIndexPath:(NSIndexPath*)indexPath {
-}
-
 
 @end

@@ -159,6 +159,12 @@
 
 #pragma mark Public
 
+- (void)loadMore:(BOOL)more;
+{
+    [self load:NSURLRequestUseProtocolCachePolicy
+          more:more];
+}
+
 - (void)reset;
 {
     [super reset];
