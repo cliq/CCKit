@@ -196,11 +196,6 @@
 	
 	if (!more) {
         [self.response clear];
-        
-        // TODO: paging support
-//        if (self.nextPage && [self.nextPage intValue]>1) {
-//            self.nextPage = [NSNumber numberWithInt:1];
-//        }
     }
     
     NSMutableString *urlString = [self queryUrl];
@@ -240,23 +235,22 @@
         }
         
 	}
-    
-    // TODO: stub data support
-//#if kUseStubData
-//    // Check for stub data
-//    NSString *stubJson = [self stubJsonResponse];
-//    if (stubJson) {
-//        [_loadingRequest release];
-//        _loadingRequest = [request retain];
-//        [self didStartLoad];
-//        [self performSelector:@selector(processStub:) withObject:stubJson afterDelay:1.0];
-//        return;
-//    }
-//#endif
-    
+
     // Clear
     _connectionResponse = nil;
     _connectionResponseData = nil;
+
+#if kCCHTTPModelUseStubData
+    // Check for stub data
+    NSString *stubJson = [self stubJsonResponse];
+    if (stubJson) {
+        [self didStartLoad];
+        [self performSelector:@selector(processStubResponse:)
+                   withObject:stubJson
+                   afterDelay:1.0];
+        return;
+    }
+#endif
     
 	// Do the request
     NSURLConnection *connection = [NSURLConnection connectionWithRequest:request delegate:self];
@@ -287,6 +281,25 @@
     return _isLoaded;
 }
 
+#pragma mark - Stub data
+
+- (void)processStubResponse:(NSString *)json;
+{
+    NSHTTPURLResponse *response = [[NSHTTPURLResponse alloc] initWithURL:nil
+                                                              statusCode:200
+                                                             HTTPVersion:nil
+                                                            headerFields:nil];
+    NSData *data = [json dataUsingEncoding:NSUTF8StringEncoding];
+    [self parseResponse:response withData:data];
+}
+
+// Override if needed
+- (NSString *)stubJsonResponse;
+{
+    return nil;
+}
+
+
 #pragma mark - NSURLConnectionDelegate
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error;
@@ -299,10 +312,10 @@
     _connection = nil;
 }
 
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection;
+- (void)parseResponse:(NSHTTPURLResponse *)response withData:(NSData *)data;
 {
-    NSError *error = [self.response parseResponse:(NSHTTPURLResponse *)_connectionResponse
-                                         withData:_connectionResponseData
+    NSError *error = [self.response parseResponse:response
+                                         withData:data
                                             error:nil];
     
     if (error) {
@@ -311,6 +324,13 @@
         _isLoaded = YES;
         [self didFinishLoad];
     }
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection;
+{
+    [self parseResponse:(NSHTTPURLResponse *)_connectionResponse
+               withData:_connectionResponseData];
+    
     _connection = nil;
 }
 

@@ -24,8 +24,13 @@
 @property (nonatomic, retain) NSOperationQueue *requestQueue;
 @property (nonatomic, retain) CCHTTPModelResponse *response;
 
+- (void)load:(NSURLRequestCachePolicy)cachePolicy more:(BOOL)more;
+
+
 // Protected:
 @property (nonatomic, readonly) NSURLConnection *connection;
 - (NSMutableDictionary *)queryStringParameters;
+- (NSString *)stubJsonResponse;
+- (CCHTTPModelResponse *)newResponseObject;
 
 @end
