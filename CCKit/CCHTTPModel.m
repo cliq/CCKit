@@ -10,6 +10,8 @@
 
 @interface CCHTTPModel ()
 
+@property (nonatomic, readwrite, getter = isLoadingStubData) BOOL loadingStubData;
+
 @property (nonatomic, readonly) NSString *baseUrl;
 @property (nonatomic, readonly) NSString *resource;
 @property (nonatomic, readonly) NSString *requestMethod;
@@ -250,7 +252,10 @@
     // Check for stub data
     NSString *stubJson = [self stubJsonResponse];
     if (stubJson) {
-        [self didStartLoad];
+        self.loadingStubData = YES;
+        [self performSelector:@selector(didStartLoad)
+                   withObject:nil
+                   afterDelay:0.1];
         [self performSelector:@selector(processStubResponse:)
                    withObject:stubJson
                    afterDelay:1.0];
@@ -258,7 +263,7 @@
     }
 #endif
     
-	// Do the request
+    // Create the request
     NSURLConnection *connection = [NSURLConnection connectionWithRequest:request delegate:self];
     [_connection cancel];
     _connection = connection;
@@ -269,7 +274,7 @@
 
 - (BOOL)isLoading;
 {
-    return (_connection!=nil);
+    return (_connection!=nil || self.isLoadingStubData);
 }
 
 - (BOOL)isLoadingMore;
@@ -291,6 +296,8 @@
 
 - (void)processStubResponse:(NSString *)json;
 {
+    self.loadingStubData = NO;
+    
     NSHTTPURLResponse *response = [[NSHTTPURLResponse alloc] initWithURL:nil
                                                               statusCode:200
                                                              HTTPVersion:nil
