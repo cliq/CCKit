@@ -90,20 +90,12 @@
 
 #pragma mark - Delegates
 
-static const void* CCRetainNoOp(CFAllocatorRef allocator, const void *value) { return value; }
-static void CCReleaseNoOp(CFAllocatorRef allocator, const void *value) { }
-
 - (NSMutableArray *)delegates;
 {
     // Creates a non-retaining array
     if (!_delegates) {
-        CFArrayCallBacks callbacks = kCFTypeArrayCallBacks;
-        callbacks.retain = CCRetainNoOp;
-        callbacks.release = CCReleaseNoOp;
-        
-        // TODO: validate memory management on ARC
-//        return (NSMutableArray*)CFArrayCreateMutable(nil, 0, &callbacks);
-        return (__bridge NSMutableArray*)CFArrayCreateMutable(nil, 0, &callbacks);
+        CFArrayCallBacks callbacks = {0, NULL, NULL, CFCopyDescription, CFEqual};
+        _delegates = (__bridge id)(CFArrayCreateMutable(0, 0, &callbacks));
     }
     return _delegates;
 }
