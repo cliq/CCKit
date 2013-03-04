@@ -28,6 +28,7 @@
 		4278B7D6166CD28100D0FE59 /* CCHTTPModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B7D4166CD28100D0FE59 /* CCHTTPModel.m */; };
 		4278B7DA166CD77F00D0FE59 /* CCHTTPModelResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B7D9166CD77F00D0FE59 /* CCHTTPModelResponse.m */; };
 		4278B7DB166CD77F00D0FE59 /* CCHTTPModelResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B7D9166CD77F00D0FE59 /* CCHTTPModelResponse.m */; };
+		429CF9D216E4CCA10098CF36 /* CCModelTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 429CF9D116E4CCA10098CF36 /* CCModelTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -71,6 +72,8 @@
 		4278B7D8166CD77F00D0FE59 /* CCHTTPModelResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCHTTPModelResponse.h; sourceTree = "<group>"; };
 		4278B7D9166CD77F00D0FE59 /* CCHTTPModelResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCHTTPModelResponse.m; sourceTree = "<group>"; };
 		4278B7DD166CD89A00D0FE59 /* CCDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCDefines.h; sourceTree = "<group>"; };
+		429CF9D016E4CCA10098CF36 /* CCModelTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCModelTableViewController.h; sourceTree = "<group>"; };
+		429CF9D116E4CCA10098CF36 /* CCModelTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCModelTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +192,8 @@
 			children = (
 				4278B7C7166CC8CB00D0FE59 /* CCModelViewController.h */,
 				4278B7C8166CC8CB00D0FE59 /* CCModelViewController.m */,
+				429CF9D016E4CCA10098CF36 /* CCModelTableViewController.h */,
+				429CF9D116E4CCA10098CF36 /* CCModelTableViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -289,6 +294,7 @@
 				4278B7C9166CC8CB00D0FE59 /* CCModelViewController.m in Sources */,
 				4278B7D5166CD28100D0FE59 /* CCHTTPModel.m in Sources */,
 				4278B7DA166CD77F00D0FE59 /* CCHTTPModelResponse.m in Sources */,
+				429CF9D216E4CCA10098CF36 /* CCModelTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
