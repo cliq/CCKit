@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		424892D516E9052D00512E78 /* CCTwitterLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 424892D416E9052D00512E78 /* CCTwitterLoginManager.m */; };
+		424892D616E9052D00512E78 /* CCTwitterLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 424892D416E9052D00512E78 /* CCTwitterLoginManager.m */; };
+		424892DC16E9060100512E78 /* TWAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 424892D916E9060100512E78 /* TWAPIManager.m */; };
+		424892DD16E9060100512E78 /* TWAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 424892D916E9060100512E78 /* TWAPIManager.m */; };
+		424892DE16E9060100512E78 /* TWSignedRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 424892DB16E9060100512E78 /* TWSignedRequest.m */; };
+		424892DF16E9060100512E78 /* TWSignedRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 424892DB16E9060100512E78 /* TWSignedRequest.m */; };
+		4248930316E90C8900512E78 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 424892FC16E90C8900512E78 /* LICENSE */; };
+		4248930416E90C8900512E78 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 424892FE16E90C8900512E78 /* NSData+Base64.m */; };
+		4248930516E90C8900512E78 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 424892FE16E90C8900512E78 /* NSData+Base64.m */; };
+		4248930616E90C8900512E78 /* OAuth+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4248930016E90C8900512E78 /* OAuth+Additions.m */; };
+		4248930716E90C8900512E78 /* OAuth+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4248930016E90C8900512E78 /* OAuth+Additions.m */; };
+		4248930816E90C8900512E78 /* OAuthCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4248930216E90C8900512E78 /* OAuthCore.m */; };
+		4248930916E90C8900512E78 /* OAuthCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4248930216E90C8900512E78 /* OAuthCore.m */; };
 		4278B78C166B85E800D0FE59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4278B78B166B85E800D0FE59 /* Foundation.framework */; };
 		4278B791166B85E800D0FE59 /* CCKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4278B790166B85E800D0FE59 /* CCKit.h */; };
 		4278B793166B85E800D0FE59 /* CCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B792166B85E800D0FE59 /* CCKit.m */; };
@@ -45,6 +58,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		424892D316E9052D00512E78 /* CCTwitterLoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTwitterLoginManager.h; sourceTree = "<group>"; };
+		424892D416E9052D00512E78 /* CCTwitterLoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCTwitterLoginManager.m; sourceTree = "<group>"; };
+		424892D816E9060100512E78 /* TWAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWAPIManager.h; sourceTree = "<group>"; };
+		424892D916E9060100512E78 /* TWAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWAPIManager.m; sourceTree = "<group>"; };
+		424892DA16E9060100512E78 /* TWSignedRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSignedRequest.h; sourceTree = "<group>"; };
+		424892DB16E9060100512E78 /* TWSignedRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWSignedRequest.m; sourceTree = "<group>"; };
+		424892FC16E90C8900512E78 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		424892FD16E90C8900512E78 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		424892FE16E90C8900512E78 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		424892FF16E90C8900512E78 /* OAuth+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OAuth+Additions.h"; sourceTree = "<group>"; };
+		4248930016E90C8900512E78 /* OAuth+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OAuth+Additions.m"; sourceTree = "<group>"; };
+		4248930116E90C8900512E78 /* OAuthCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthCore.h; sourceTree = "<group>"; };
+		4248930216E90C8900512E78 /* OAuthCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthCore.m; sourceTree = "<group>"; };
 		4278B788166B85E800D0FE59 /* libCCKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCCKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4278B78B166B85E800D0FE59 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4278B78F166B85E800D0FE59 /* CCKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CCKit-Prefix.pch"; path = "../CCKit-Prefix.pch"; sourceTree = "<group>"; };
@@ -98,6 +124,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		424892D116E9050D00512E78 /* Twitter */ = {
+			isa = PBXGroup;
+			children = (
+				424892FB16E90C8900512E78 /* OAuthCore */,
+				424892D716E9060100512E78 /* TWiOSReverseAuth */,
+				424892D316E9052D00512E78 /* CCTwitterLoginManager.h */,
+				424892D416E9052D00512E78 /* CCTwitterLoginManager.m */,
+			);
+			name = Twitter;
+			sourceTree = "<group>";
+		};
+		424892D716E9060100512E78 /* TWiOSReverseAuth */ = {
+			isa = PBXGroup;
+			children = (
+				424892D816E9060100512E78 /* TWAPIManager.h */,
+				424892D916E9060100512E78 /* TWAPIManager.m */,
+				424892DA16E9060100512E78 /* TWSignedRequest.h */,
+				424892DB16E9060100512E78 /* TWSignedRequest.m */,
+			);
+			path = TWiOSReverseAuth;
+			sourceTree = "<group>";
+		};
+		424892FB16E90C8900512E78 /* OAuthCore */ = {
+			isa = PBXGroup;
+			children = (
+				424892FC16E90C8900512E78 /* LICENSE */,
+				424892FD16E90C8900512E78 /* NSData+Base64.h */,
+				424892FE16E90C8900512E78 /* NSData+Base64.m */,
+				424892FF16E90C8900512E78 /* OAuth+Additions.h */,
+				4248930016E90C8900512E78 /* OAuth+Additions.m */,
+				4248930116E90C8900512E78 /* OAuthCore.h */,
+				4248930216E90C8900512E78 /* OAuthCore.m */,
+			);
+			path = OAuthCore;
+			sourceTree = "<group>";
+		};
 		4278B77D166B85E800D0FE59 = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +193,7 @@
 		4278B78D166B85E800D0FE59 /* CCKit */ = {
 			isa = PBXGroup;
 			children = (
+				424892D116E9050D00512E78 /* Twitter */,
 				4278B7DC166CD87000D0FE59 /* Common */,
 				4278B7C1166B912400D0FE59 /* Model */,
 				4278B7D2166CD23100D0FE59 /* View Controllers */,
@@ -279,6 +342,7 @@
 				4278B7B1166B860800D0FE59 /* Default.png in Resources */,
 				4278B7B3166B860800D0FE59 /* Default@2x.png in Resources */,
 				4278B7B5166B860800D0FE59 /* Default-568h@2x.png in Resources */,
+				4248930316E90C8900512E78 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +359,12 @@
 				4278B7D5166CD28100D0FE59 /* CCHTTPModel.m in Sources */,
 				4278B7DA166CD77F00D0FE59 /* CCHTTPModelResponse.m in Sources */,
 				429CF9D216E4CCA10098CF36 /* CCModelTableViewController.m in Sources */,
+				424892D516E9052D00512E78 /* CCTwitterLoginManager.m in Sources */,
+				424892DC16E9060100512E78 /* TWAPIManager.m in Sources */,
+				424892DE16E9060100512E78 /* TWSignedRequest.m in Sources */,
+				4248930416E90C8900512E78 /* NSData+Base64.m in Sources */,
+				4248930616E90C8900512E78 /* OAuth+Additions.m in Sources */,
+				4248930816E90C8900512E78 /* OAuthCore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +379,12 @@
 				4278B7CA166CC8CB00D0FE59 /* CCModelViewController.m in Sources */,
 				4278B7D6166CD28100D0FE59 /* CCHTTPModel.m in Sources */,
 				4278B7DB166CD77F00D0FE59 /* CCHTTPModelResponse.m in Sources */,
+				424892D616E9052D00512E78 /* CCTwitterLoginManager.m in Sources */,
+				424892DD16E9060100512E78 /* TWAPIManager.m in Sources */,
+				424892DF16E9060100512E78 /* TWSignedRequest.m in Sources */,
+				4248930516E90C8900512E78 /* NSData+Base64.m in Sources */,
+				4248930716E90C8900512E78 /* OAuth+Additions.m in Sources */,
+				4248930916E90C8900512E78 /* OAuthCore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
