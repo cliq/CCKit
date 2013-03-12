@@ -143,9 +143,7 @@
 
 - (NSString *)contentType;
 {
-    return nil;
-    
-//  return @"application/x-www-form-urlencoded";
+    return @"application/x-www-form-urlencoded";
 }
 
 - (NSMutableDictionary *)queryStringParameters;
