@@ -38,9 +38,9 @@
 - (void)didChange;
 - (void)beginUpdates;
 - (void)endUpdates;
-- (void)didUpdateObject:(id)object atIndexPath:(NSIndexPath *)indexPath;
-- (void)didInsertObject:(id)object atIndexPath:(NSIndexPath *)indexPath;
-- (void)didDeleteObject:(id)object atIndexPath:(NSIndexPath *)indexPath;
+- (void)didUpdateObjects:(NSArray *)objects atIndexPaths:(NSArray *)indexPaths;
+- (void)didInsertObjects:(NSArray *)objects atIndexPaths:(NSArray *)indexPaths;
+- (void)didDeleteObjects:(NSArray *)objects atIndexPaths:(NSArray *)indexPaths;
 
 @end
 

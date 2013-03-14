@@ -20,9 +20,9 @@
 - (void)modelDidCancelLoad:(id<CCModel>)model;
 
 - (void)modelDidChange:(id<CCModel>)model;
-- (void)model:(id<CCModel>)model didUpdateObject:(id)object atIndexPath:(NSIndexPath *)indexPath;
-- (void)model:(id<CCModel>)model didInsertObject:(id)object atIndexPath:(NSIndexPath *)indexPath;
-- (void)model:(id<CCModel>)model didDeleteObject:(id)object atIndexPath:(NSIndexPath *)indexPath;
+- (void)model:(id<CCModel>)model didUpdateObjects:(NSArray *)objects atIndexPaths:(NSArray *)indexPaths;
+- (void)model:(id<CCModel>)model didInsertObjects:(NSArray *)objects atIndexPaths:(NSArray *)indexPaths;
+- (void)model:(id<CCModel>)model didDeleteObjects:(NSArray *)objects atIndexPaths:(NSArray *)indexPaths;
 
 - (void)modelDidBeginUpdates:(id<CCModel>)model;
 - (void)modelDidEndUpdates:(id<CCModel>)model;

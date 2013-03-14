@@ -74,17 +74,17 @@
     [self delegatePerformSelector:@selector(modelDidEndUpdates:) withObject:self];
 }
 
-- (void)didUpdateObject:(id)object atIndexPath:(NSIndexPath *)indexPath;
+- (void)didUpdateObjects:(NSArray *)objects atIndexPaths:(NSArray *)indexPaths;
 {
-    [self delegatePerformSelector:@selector(model:didUpdateObject:atIndexPath:) withObject:self withObject:object withObject:indexPath];
+    [self delegatePerformSelector:@selector(model:didUpdateObjects:atIndexPaths:) withObject:self withObject:objects withObject:indexPaths];
 }
-- (void)didInsertObject:(id)object atIndexPath:(NSIndexPath *)indexPath;
+- (void)didInsertObjects:(NSArray *)objects atIndexPaths:(NSArray *)indexPaths;
 {
-    [self delegatePerformSelector:@selector(model:didInsertObject:atIndexPath:) withObject:self withObject:object withObject:indexPath];
+    [self delegatePerformSelector:@selector(model:didInsertObjects:atIndexPaths:) withObject:self withObject:objects withObject:indexPaths];
 }
-- (void)didDeleteObject:(id)object atIndexPath:(NSIndexPath *)indexPath;
+- (void)didDeleteObjects:(NSArray *)objects atIndexPaths:(NSArray *)indexPaths;
 {
-    [self delegatePerformSelector:@selector(model:didDeleteObject:atIndexPath:) withObject:self withObject:object withObject:indexPath];
+    [self delegatePerformSelector:@selector(model:didDeleteObjects:atIndexPaths:) withObject:self withObject:objects withObject:indexPaths];
 }
 
 
