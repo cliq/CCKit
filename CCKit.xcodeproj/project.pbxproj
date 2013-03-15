@@ -38,6 +38,7 @@
 		4278B7D6166CD28100D0FE59 /* CCHTTPModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B7D4166CD28100D0FE59 /* CCHTTPModel.m */; };
 		4278B7DA166CD77F00D0FE59 /* CCHTTPModelResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B7D9166CD77F00D0FE59 /* CCHTTPModelResponse.m */; };
 		4278B7DB166CD77F00D0FE59 /* CCHTTPModelResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B7D9166CD77F00D0FE59 /* CCHTTPModelResponse.m */; };
+		42982A6516F38FCF001A6CEB /* CCLoadingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42982A6416F38FCF001A6CEB /* CCLoadingController.m */; };
 		429CF9D216E4CCA10098CF36 /* CCModelTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 429CF9D116E4CCA10098CF36 /* CCModelTableViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +96,8 @@
 		4278B7D8166CD77F00D0FE59 /* CCHTTPModelResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCHTTPModelResponse.h; sourceTree = "<group>"; };
 		4278B7D9166CD77F00D0FE59 /* CCHTTPModelResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCHTTPModelResponse.m; sourceTree = "<group>"; };
 		4278B7DD166CD89A00D0FE59 /* CCDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCDefines.h; sourceTree = "<group>"; };
+		42982A6316F38FCF001A6CEB /* CCLoadingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLoadingController.h; sourceTree = "<group>"; };
+		42982A6416F38FCF001A6CEB /* CCLoadingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLoadingController.m; sourceTree = "<group>"; };
 		429CF9D016E4CCA10098CF36 /* CCModelTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCModelTableViewController.h; sourceTree = "<group>"; };
 		429CF9D116E4CCA10098CF36 /* CCModelTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCModelTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -194,6 +197,7 @@
 				4278B7DC166CD87000D0FE59 /* Common */,
 				4278B7C1166B912400D0FE59 /* Model */,
 				4278B7D2166CD23100D0FE59 /* View Controllers */,
+				42982A6116F38FB3001A6CEB /* Controls */,
 				4278B790166B85E800D0FE59 /* CCKit.h */,
 				4278B792166B85E800D0FE59 /* CCKit.m */,
 			);
@@ -264,6 +268,15 @@
 				4278B7DD166CD89A00D0FE59 /* CCDefines.h */,
 			);
 			name = Common;
+			sourceTree = "<group>";
+		};
+		42982A6116F38FB3001A6CEB /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				42982A6316F38FCF001A6CEB /* CCLoadingController.h */,
+				42982A6416F38FCF001A6CEB /* CCLoadingController.m */,
+			);
+			name = Controls;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,6 +375,7 @@
 				4248930416E90C8900512E78 /* NSData+Base64.m in Sources */,
 				4248930616E90C8900512E78 /* OAuth+Additions.m in Sources */,
 				4248930816E90C8900512E78 /* OAuthCore.m in Sources */,
+				42982A6516F38FCF001A6CEB /* CCLoadingController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
