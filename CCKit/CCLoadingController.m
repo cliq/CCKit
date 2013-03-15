@@ -10,6 +10,8 @@
 
 @implementation CCLoadingController
 
+@synthesize loadingView = _loadingView;
+
 #pragma mark - Loading
 
 - (UIView *)loadingView;

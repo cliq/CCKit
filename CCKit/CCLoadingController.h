@@ -13,7 +13,7 @@
 @interface CCLoadingController : NSObject
 
 @property (nonatomic, readonly) UIView *loadingView;
-@property (nonatomic, weak) id<CCLoadingController> delegate;
+@property (nonatomic, weak) id<CCLoadingControllerDelegate> delegate;
 
 - (void)showLoadingView:(BOOL)show animated:(BOOL)animated;
 
