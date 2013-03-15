@@ -8,18 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		424892D516E9052D00512E78 /* CCTwitterLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 424892D416E9052D00512E78 /* CCTwitterLoginManager.m */; };
-		424892D616E9052D00512E78 /* CCTwitterLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 424892D416E9052D00512E78 /* CCTwitterLoginManager.m */; };
 		424892DC16E9060100512E78 /* TWAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 424892D916E9060100512E78 /* TWAPIManager.m */; };
-		424892DD16E9060100512E78 /* TWAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 424892D916E9060100512E78 /* TWAPIManager.m */; };
 		424892DE16E9060100512E78 /* TWSignedRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 424892DB16E9060100512E78 /* TWSignedRequest.m */; };
-		424892DF16E9060100512E78 /* TWSignedRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 424892DB16E9060100512E78 /* TWSignedRequest.m */; };
 		4248930316E90C8900512E78 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 424892FC16E90C8900512E78 /* LICENSE */; };
-		4248930416E90C8900512E78 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 424892FE16E90C8900512E78 /* NSData+Base64.m */; };
-		4248930516E90C8900512E78 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 424892FE16E90C8900512E78 /* NSData+Base64.m */; };
-		4248930616E90C8900512E78 /* OAuth+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4248930016E90C8900512E78 /* OAuth+Additions.m */; };
-		4248930716E90C8900512E78 /* OAuth+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4248930016E90C8900512E78 /* OAuth+Additions.m */; };
-		4248930816E90C8900512E78 /* OAuthCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4248930216E90C8900512E78 /* OAuthCore.m */; };
-		4248930916E90C8900512E78 /* OAuthCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4248930216E90C8900512E78 /* OAuthCore.m */; };
+		4248930416E90C8900512E78 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 424892FE16E90C8900512E78 /* NSData+Base64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4248930516E90C8900512E78 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 424892FE16E90C8900512E78 /* NSData+Base64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4248930616E90C8900512E78 /* OAuth+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4248930016E90C8900512E78 /* OAuth+Additions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4248930716E90C8900512E78 /* OAuth+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4248930016E90C8900512E78 /* OAuth+Additions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4248930816E90C8900512E78 /* OAuthCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4248930216E90C8900512E78 /* OAuthCore.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4248930916E90C8900512E78 /* OAuthCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4248930216E90C8900512E78 /* OAuthCore.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4278B78C166B85E800D0FE59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4278B78B166B85E800D0FE59 /* Foundation.framework */; };
 		4278B791166B85E800D0FE59 /* CCKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4278B790166B85E800D0FE59 /* CCKit.h */; };
 		4278B793166B85E800D0FE59 /* CCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B792166B85E800D0FE59 /* CCKit.m */; };
@@ -379,9 +376,6 @@
 				4278B7CA166CC8CB00D0FE59 /* CCModelViewController.m in Sources */,
 				4278B7D6166CD28100D0FE59 /* CCHTTPModel.m in Sources */,
 				4278B7DB166CD77F00D0FE59 /* CCHTTPModelResponse.m in Sources */,
-				424892D616E9052D00512E78 /* CCTwitterLoginManager.m in Sources */,
-				424892DD16E9060100512E78 /* TWAPIManager.m in Sources */,
-				424892DF16E9060100512E78 /* TWSignedRequest.m in Sources */,
 				4248930516E90C8900512E78 /* NSData+Base64.m in Sources */,
 				4248930716E90C8900512E78 /* OAuth+Additions.m in Sources */,
 				4248930916E90C8900512E78 /* OAuthCore.m in Sources */,

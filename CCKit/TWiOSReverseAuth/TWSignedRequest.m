@@ -123,17 +123,27 @@
 // OBFUSCATE YOUR KEYS!
 + (NSString *)consumerKey
 {
+#ifdef kTWConsumerKey
     NSAssert([kTWConsumerKey length] > 0,
              @"You must enter your consumer key in Build Settings.");
     return kTWConsumerKey;
+#else
+#warning You must enter your consumer key in Build Settings.
+    return nil;
+#endif
 }
 
 // OBFUSCATE YOUR KEYS!
 + (NSString *)consumerSecret
 {
+#ifdef kTWConsumerKey
     NSAssert([kTWConsumerSecret length] > 0,
              @"You must enter your consumer secret in Build Settings.");
     return kTWConsumerSecret;
+#else
+#warning You must enter your consumer key in Build Settings.
+    return nil;
+#endif
 }
 
 @end
