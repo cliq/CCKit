@@ -31,17 +31,57 @@
 {
     [super loadView];
     
+    self.view.backgroundColor = [UIColor whiteColor];
+    
     CGRect rect = self.view.bounds;
     self.tableView.frame = rect;
     [self.view addSubview:self.tableView];
 }
 
+- (void)viewDidLoad;
+{
+    [super viewDidLoad];
+    
+    self.tableView.hidden = YES;
+}
+
+- (void)refreshDataSource;
+{
+    // Refresh sections calculations
+}
+
 #pragma mark - CCModelViewController
+
+- (void)showLoading:(BOOL)show;
+{
+    if (show) {
+        CCDebug(@"Started loading...");
+    } else {
+        CCDebug(@"Finished loading...");
+    }
+}
+
+- (void)showError:(BOOL)show;
+{
+    if (show) {
+        CCDebug(@"Error loading model:\n%@", self.modelError);
+    }
+}
+
+- (void)showEmpty:(BOOL)show;
+{
+    if (show) {
+        CCDebug(@"Empty model.");
+    }
+}
+
 
 - (void)showModel:(BOOL)show;
 {
     self.tableView.hidden = !show;
+    
     if (show) {
+        [self refreshDataSource];
         [self.tableView reloadData];
     }
 }

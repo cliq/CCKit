@@ -12,4 +12,7 @@
 
 @property (nonatomic, strong) UITableView *tableView;
 
+// Protected:
+- (void)refreshDataSource; // Refresh data source for table view
+
 @end
