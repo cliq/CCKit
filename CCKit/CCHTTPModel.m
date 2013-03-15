@@ -290,6 +290,13 @@
     return _isLoaded;
 }
 
+- (void)didFinishLoad;
+{
+    _isOutdated = NO;
+    
+    [super didFinishLoad];
+}
+
 #pragma mark - Stub data
 
 - (void)processStubResponse:(NSString *)json;
