@@ -16,11 +16,20 @@
 
 @synthesize tableView = _tableView;
 
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        self.tableViewStyle = UITableViewStylePlain;
+    }
+    return self;
+}
+
 - (UITableView *)tableView;
 {
     if (!_tableView) {
         _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 320.0f, 400.0f)
-                                                  style:UITableViewStylePlain];
+                                                  style:self.tableViewStyle];
         _tableView.dataSource = self;
         _tableView.delegate = self;
     }

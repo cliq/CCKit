@@ -12,6 +12,8 @@
 
 @property (nonatomic, strong) UITableView *tableView;
 
+@property (nonatomic, readwrite) UITableViewStyle tableViewStyle;
+
 // Protected:
 - (void)refreshDataSource; // Refresh data source for table view
 
