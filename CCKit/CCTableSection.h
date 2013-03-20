@@ -15,7 +15,10 @@
 
 @property (nonatomic, readonly) NSUInteger rowCount;
 
+@property (nonatomic, strong) id userInfo;
+
 - (void)addRow:(id)row;
+- (void)removeRow:(id)row;
 - (id)rowAtIndex:(NSUInteger)index;
 
 @end

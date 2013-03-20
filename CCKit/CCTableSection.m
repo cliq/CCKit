@@ -36,4 +36,14 @@
     
     [self.rows addObject:row];
 }
+
+- (void)removeRow:(id)row;
+{
+    if (!row || self.rows.count==0) {
+        return;
+    }
+    
+    [self.rows removeObject:row];
+}
+
 @end
