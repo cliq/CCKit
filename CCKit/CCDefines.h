@@ -34,6 +34,7 @@
 #define CCiPhone568NameForImage(image) (CCisPhone568 ? [NSString stringWithFormat:@"%@-568h.%@", [image stringByDeletingPathExtension], [image pathExtension]] : image)
 #define CCiPhone568ImageNamed(image) ([UIImage imageNamed:CCiPhone568NameForImage(image)])
 
+#define CCisRetina ([[UIScreen mainScreen] respondsToSelector:@selector(displayLinkWithTarget:selector:)] && ([UIScreen mainScreen].scale == 2.0))
 
 #pragma mark - CC Singleton
 
