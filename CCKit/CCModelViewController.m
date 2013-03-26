@@ -43,6 +43,11 @@
     return [[CCModel alloc] init];
 }
 
+- (BOOL)isModelLoading;
+{
+    return [_model isLoading];
+}
+
 - (void)showLoading:(BOOL)show {
 }
 
@@ -147,7 +152,7 @@
         }
     }
     
-    if (_model.isLoading) {
+    if ([self isModelLoading]) {
         showLoading = !_flags.isShowingLoading;
         _flags.isShowingLoading = YES;
         
@@ -201,33 +206,20 @@
 #pragma mark UIViewController
 
 
-- (void)viewWillAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated;
+{
     _isViewAppearing = YES;
-    _hasViewAppeared = YES;
     
     [self updateView];
     
     [super viewWillAppear:animated];
 }
 
-// TODO: fix isViewAppearing and hasViewAppeared naming
-//- (void)viewDidAppear:(BOOL)animated;
-//{
-//    _isViewAppearing = NO;
-//    
-//    [super viewDidAppear:animated];
-//}
-
-
-- (void)didReceiveMemoryWarning {
-    if (_hasViewAppeared && !_isViewAppearing) {
-        [super didReceiveMemoryWarning];
-        [self resetViewStates];
-        [self refresh];
-        
-    } else {
-        [super didReceiveMemoryWarning];
-    }
+- (void)viewDidAppear:(BOOL)animated;
+{
+    _isViewAppearing = NO;
+    
+    [super viewDidAppear:animated];
 }
 
 #pragma mark - Public
@@ -290,7 +282,7 @@
 
 
 - (BOOL)shouldReload {
-    return !_modelError && self.model.isOutdated;
+    return self.shouldLoad && !_modelError && self.model.isOutdated;
 }
 
 
@@ -309,9 +301,13 @@
     [self.model loadMore:NO];
 }
 
+- (void)loadMore; {
+    [self.model loadMore:YES];
+}
+
 
 - (void)reloadIfNeeded {
-    if ([self shouldReload] && !self.model.isLoading) {
+    if ([self shouldReload] && ![self isModelLoading]) {
         [self reload];
     }
 }
@@ -321,24 +317,24 @@
     _flags.isViewInvalid = YES;
     _flags.isModelDidRefreshInvalid = YES;
     
-    BOOL loading = self.model.isLoading;
+    BOOL loading = [self isModelLoading];
     BOOL loaded = self.model.isLoaded;
     if (!loading && !loaded && [self shouldLoad]) {
         // TODO: load from cache first
 //        [self.model load:TTURLRequestCachePolicyDefault more:NO];
-        [self.model loadMore:NO];
+        [self reload];
         
     } else if (!loading && loaded && [self shouldReload]) {
         // TODO: force from network
 //        [self.model load:TTURLRequestCachePolicyNetwork more:NO];
-        [self.model loadMore:NO];
+        [self reload];
         
     } else if (!loading && [self shouldLoadMore]) {
-        [self.model loadMore:YES];
+        [self loadMore];
         
     } else {
         _flags.isModelDidLoadInvalid = YES;
-        if (_isViewAppearing) {
+        if (_isViewAppearing || [self isViewLoaded]) {
             [self updateView];
         }
     }
@@ -358,7 +354,7 @@
 
 - (void)invalidateView {
     _flags.isViewInvalid = YES;
-    if (_isViewAppearing) {
+    if (_isViewAppearing || [self isViewLoaded]) {
         [self updateView];
     }
 }

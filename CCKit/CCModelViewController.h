@@ -13,7 +13,6 @@
 @interface CCModelViewController : UIViewController <CCModelDelegate> {
     
     BOOL _isViewAppearing;
-    BOOL _hasViewAppeared;
     
     struct {
         unsigned int isModelDidRefreshInvalid:1;
@@ -21,9 +20,9 @@
         unsigned int isModelDidLoadInvalid:1;
         unsigned int isModelDidLoadFirstTimeInvalid:1;
         unsigned int isModelDidShowFirstTimeInvalid:1;
-        unsigned int isViewInvalid:1;
-        unsigned int isViewSuspended:1;
-        unsigned int isUpdatingView:1;
+        unsigned int isViewInvalid:1; // View needs to be refreshed by -updateView
+        unsigned int isViewSuspended:1; // View is the middle of a beginUpdates / endUpdates state
+        unsigned int isUpdatingView:1; // View is being updated by -updateView
         unsigned int isShowingEmpty:1;
         unsigned int isShowingLoading:1;
         unsigned int isShowingModel:1;
@@ -79,19 +78,30 @@
 - (BOOL)canShowModel;
 
 /**
- * Reloads data from the model.
+ * Reloads data from the model, if self.shouldLoad==YES
  */
 - (void)reload;
 
 /**
- * Reloads data from the model if it has become out of date.
+ * Reloads data from the model if it has become out of date, if self.shouldReload==YES
  */
 - (void)reloadIfNeeded;
 
 /**
- * Refreshes the model state and loads new data if necessary.
+ * Load more records from the model, if available.
+ */
+- (void)loadMore;
+
+/**
+ * Refreshes the model state and loads new data if necessary by calling -reload
  */
 - (void)refresh;
+
+/**
+ * Default implementation returns self.model.isLoading, but take into account other
+ * things before the actual model is loaded, as updating the location manager.
+ */
+- (BOOL)isModelLoading;
 
 /**
  * Begins a multi-stage update.
@@ -117,6 +127,7 @@
 
 /**
  * Immediately creates, loads, and displays the model (if it was not already).
+ * Will reload model if self.shouldReload==YES and it is outdated (model.isOutdated==YES).
  */
 - (void)updateView;
 
