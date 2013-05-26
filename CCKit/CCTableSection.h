@@ -17,6 +17,10 @@
 
 @property (nonatomic, strong) id userInfo;
 
+@property (nonatomic, assign, getter = isCollapsible) BOOL collapsible;
+@property (nonatomic, assign, getter = isCollapsed) BOOL collapsed;
+
+
 - (void)addRow:(id)row;
 - (void)removeRow:(id)row;
 - (id)rowAtIndex:(NSUInteger)index;
