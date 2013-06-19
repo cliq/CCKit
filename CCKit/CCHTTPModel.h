@@ -28,9 +28,10 @@
 
 
 // Protected:
-@property (nonatomic, readonly) NSURLConnection *connection;
+@property (nonatomic, readonly, strong) NSURLConnection *connection;
 - (NSMutableDictionary *)queryStringParameters;
 - (NSString *)stubJsonResponse;
 - (CCHTTPModelResponse *)newResponseObject;
+- (NSData *)postBody;
 
 @end

@@ -17,6 +17,8 @@
 @property (nonatomic, readonly) NSString *requestMethod;
 @property (nonatomic, readonly) NSString *contentType;
 
+@property (nonatomic, readwrite, strong) NSURLConnection *connection;
+
 @end
 
 @implementation CCHTTPModel
@@ -92,11 +94,12 @@
 - (NSMutableString *)queryUrl;
 {
 	// Base URL with resource, if available
-	NSMutableString *urlString = [[self baseUrl] mutableCopy];
+    NSString *baseUrl = [self baseUrl];
 	NSString *resource = [self resource];
 	if (resource.length>0) {
-		[urlString appendString:resource];
+        baseUrl = [baseUrl stringByAppendingPathComponent:resource];
 	}
+	NSMutableString *urlString = [baseUrl mutableCopy];
 	
 	// Query parameters
 	if ([[self requestMethod] isEqualToString:@"GET"]) {
@@ -152,6 +155,17 @@
     return queryStringParameters;
 }
 
+- (NSData *)postBody;
+{
+    NSDictionary *params = [self queryStringParameters];
+    NSMutableString *paramsString = [self urlRepresentationForObject:params];
+    NSData *httpBody = nil;
+    if (paramsString.length>0) {
+        httpBody = [paramsString dataUsingEncoding:NSUTF8StringEncoding];
+    }
+    return httpBody;
+}
+
 - (CCHTTPModelResponse *)newResponseObject;
 {
     return [[CCHTTPModelResponse alloc] init];
@@ -181,7 +195,7 @@
 - (void)cancel;
 {
     if (self.isLoading) {
-        [_connection cancel];
+        [self.connection cancel];
     }
 }
 
@@ -227,16 +241,13 @@
 	request.HTTPMethod = method;
 	
 	if ([method isEqualToString:@"POST"]) {
-        NSDictionary *params = [self queryStringParameters];
-        NSMutableString *paramsString = [self urlRepresentationForObject:params];
-		if (paramsString.length>0) {
+        NSData *httpBody = [self postBody];
+        if (httpBody) {
             if (self.contentType) {
                 [request setValue:self.contentType forHTTPHeaderField:@"content-type"];
             }
             
-            CCLog(@"POST body:\n%@", paramsString);
-            NSData *httpBody = [paramsString dataUsingEncoding:NSUTF8StringEncoding];
-            
+            CCLog(@"POST body:\n%@", [[NSString alloc] initWithData:httpBody encoding:NSUTF8StringEncoding]);
             [request setHTTPBody:httpBody];
         }
         
@@ -263,16 +274,16 @@
     
     // Create the request
     NSURLConnection *connection = [NSURLConnection connectionWithRequest:request delegate:self];
-    [_connection cancel];
-    _connection = connection;
-    [_connection start];
+    [self.connection cancel];
+    self.connection = connection;
+    [self.connection start];
 }
 
 #pragma mark - CCModel
 
 - (BOOL)isLoading;
 {
-    return (_connection!=nil || self.isLoadingStubData);
+    return (self.connection!=nil || self.isLoadingStubData);
 }
 
 - (BOOL)isLoadingMore;
@@ -322,12 +333,13 @@
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error;
 {
+    self.connection = nil;
+    
     if (error.domain==NSURLErrorDomain && error.code==NSURLErrorCancelled) {
         [self didCancelLoad];
     } else {
         [self didFailLoadWithError:error];
     }
-    _connection = nil;
 }
 
 - (void)parseResponse:(NSHTTPURLResponse *)response withData:(NSData *)data;
@@ -346,10 +358,10 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection;
 {
+    self.connection = nil;
+    
     [self parseResponse:(NSHTTPURLResponse *)_connectionResponse
                withData:_connectionResponseData];
-    
-    _connection = nil;
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response;

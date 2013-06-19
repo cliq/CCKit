@@ -74,7 +74,7 @@
 - (void)showError:(BOOL)show;
 {
     if (show) {
-        CCDebug(@"Error loading model:\n%@", self.modelError);
+        CCDebug(@"Error loading model %@:\n%@", self.model, self.modelError);
     }
 }
 
