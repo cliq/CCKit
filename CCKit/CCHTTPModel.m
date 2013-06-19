@@ -155,6 +155,15 @@
     return queryStringParameters;
 }
 
+- (NSMutableDictionary *)requestHeaders;
+{
+    NSMutableDictionary *requestHeaders = [NSMutableDictionary dictionary];
+    if (self.contentType) {
+        [requestHeaders setObject:self.contentType forKey:@"Content-type"];
+    }
+    return requestHeaders;
+}
+
 - (NSData *)postBody;
 {
     NSDictionary *params = [self queryStringParameters];
@@ -239,19 +248,22 @@
                                                            cachePolicy:cachePolicy
                                                        timeoutInterval:self.timeoutInterval];
 	request.HTTPMethod = method;
+    
+    NSMutableDictionary *requestHeaders = [self requestHeaders];
 	
 	if ([method isEqualToString:@"POST"]) {
         NSData *httpBody = [self postBody];
         if (httpBody) {
-            if (self.contentType) {
-                [request setValue:self.contentType forHTTPHeaderField:@"content-type"];
-            }
-            
             CCLog(@"POST body:\n%@", [[NSString alloc] initWithData:httpBody encoding:NSUTF8StringEncoding]);
             [request setHTTPBody:httpBody];
         }
         
 	}
+    
+    for (NSString *key in requestHeaders) {
+        id value = [requestHeaders objectForKey:key];
+        [request setValue:value forHTTPHeaderField:key];
+    }
 
     // Clear
     _connectionResponse = nil;
