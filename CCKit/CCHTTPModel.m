@@ -102,7 +102,9 @@
 	NSMutableString *urlString = [baseUrl mutableCopy];
 	
 	// Query parameters
-	if ([[self requestMethod] isEqualToString:@"GET"]) {
+    NSString *method = [self requestMethod];
+	if (![method isEqualToString:@"POST"]) {
+        // GET, PUT
         NSDictionary *params = [self queryStringParameters];
         NSString *paramsString = [self urlRepresentationForObject:params];
         if (paramsString.length>0) {
