@@ -94,12 +94,12 @@
 - (NSMutableString *)queryUrl;
 {
 	// Base URL with resource, if available
-    NSString *baseUrl = [self baseUrl];
+    NSURL *baseUrl = [NSURL URLWithString:[self baseUrl]];
 	NSString *resource = [self resource];
 	if (resource.length>0) {
-        baseUrl = [baseUrl stringByAppendingPathComponent:resource];
+        baseUrl = [baseUrl URLByAppendingPathComponent:resource];
 	}
-	NSMutableString *urlString = [baseUrl mutableCopy];
+	NSMutableString *urlString = [[baseUrl absoluteString] mutableCopy];
 	
 	// Query parameters
     NSString *method = [self requestMethod];
