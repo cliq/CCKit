@@ -34,5 +34,6 @@
 - (NSString *)stubJsonResponse;
 - (CCHTTPModelResponse *)newResponseObject;
 - (NSData *)postBody;
+- (BOOL)usePostBody;
 
 @end

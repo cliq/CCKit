@@ -102,8 +102,7 @@
 	NSMutableString *urlString = [[baseUrl absoluteString] mutableCopy];
 	
 	// Query parameters
-    NSString *method = [self requestMethod];
-	if (![method isEqualToString:@"POST"]) {
+	if (![self usePostBody]) {
         // GET, PUT
         NSDictionary *params = [self queryStringParameters];
         NSString *paramsString = [self urlRepresentationForObject:params];
@@ -164,6 +163,12 @@
         [requestHeaders setObject:self.contentType forKey:@"Content-type"];
     }
     return requestHeaders;
+}
+
+- (BOOL)usePostBody;
+{
+	NSString *method = [self requestMethod];
+	return ([method isEqualToString:@"POST"]);
 }
 
 - (NSData *)postBody;
@@ -253,7 +258,7 @@
     
     NSMutableDictionary *requestHeaders = [self requestHeaders];
 	
-	if ([method isEqualToString:@"POST"]) {
+	if ([self usePostBody]) {
         NSData *httpBody = [self postBody];
         if (httpBody) {
             CCLog(@"POST body:\n%@", [[NSString alloc] initWithData:httpBody encoding:NSUTF8StringEncoding]);
