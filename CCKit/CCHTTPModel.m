@@ -294,8 +294,13 @@
     // Create the request
     NSURLConnection *connection = [NSURLConnection connectionWithRequest:request delegate:self];
     [self.connection cancel];
+    
     self.connection = connection;
     [self.connection start];
+    
+    if (self.connection==connection) {
+        [self didStartLoad];
+    }
 }
 
 #pragma mark - CCModel
@@ -387,8 +392,6 @@
 {
     _connectionResponse = response;
     _connectionResponseData = [[NSMutableData alloc] init];
-
-    [self didStartLoad];
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data;
