@@ -7,7 +7,7 @@
 //
 
 #if defined(DEBUG) || defined(ADHOC)
-#define CCLog(format, ...) NSLog(@"%s | %@", __PRETTY_FUNCTION__,[NSString stringWithFormat:format, ## __VA_ARGS__])
+#define CCLog(format, ...) NSLog(format, ## __VA_ARGS__)
 #define CCDebug(format, ...) NSLog(@"%s | %@", __PRETTY_FUNCTION__,[NSString stringWithFormat:format, ## __VA_ARGS__])
 #define CC_ENTER CCDebug(@"%@", @"entered")
 #define CC_EXIT CCDebug(@"%@", @"exiting")
