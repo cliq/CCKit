@@ -11,7 +11,8 @@
 #import "CCModel.h"
 
 @interface CCModelViewController : UIViewController <CCModelDelegate> {
-    
+
+    id<CCModel> _model;
     BOOL _isViewAppearing;
     
     struct {

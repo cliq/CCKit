@@ -201,6 +201,7 @@
     
     [self cancel];
 
+    self.response = nil;
     _isLoadingMore = NO;
     _isLoaded = NO;
     _connectionResponse = nil;
