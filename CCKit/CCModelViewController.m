@@ -275,7 +275,7 @@
 
 
 - (BOOL)shouldLoad {
-    return !self.model.isLoaded;
+    return !self.model.isLoaded || self.model.isOutdated;
 }
 
 
