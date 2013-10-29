@@ -12,11 +12,11 @@
 
 @property (nonatomic, assign) NSInteger statusCode;
 @property (nonatomic, retain) NSError *lastError;
-@property (nonatomic, retain) id parsedResponse;
+@property (nonatomic, strong, readonly) NSHTTPURLResponse *httpResponse;
+@property (nonatomic, strong, readonly) NSData *responseData;
 
 // Override
 - (void)clear;
-- (NSError *)parseJSON:(id)jsonBody;
 
 // Protected:
 - (NSError *)parseResponse:(NSHTTPURLResponse *)response withData:(NSData *)responseData error:(NSError *)error;

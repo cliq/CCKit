@@ -17,6 +17,10 @@
 		4248930716E90C8900512E78 /* OAuth+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4248930016E90C8900512E78 /* OAuth+Additions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4248930816E90C8900512E78 /* OAuthCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4248930216E90C8900512E78 /* OAuthCore.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4248930916E90C8900512E78 /* OAuthCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4248930216E90C8900512E78 /* OAuthCore.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		425296EA182022BC006F9ABD /* CCRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 425296E9182022BC006F9ABD /* CCRequestModel.m */; };
+		425296EB182022BC006F9ABD /* CCRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 425296E9182022BC006F9ABD /* CCRequestModel.m */; };
+		425296EE1820231C006F9ABD /* CCHTTPModelJSONResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 425296ED1820231C006F9ABD /* CCHTTPModelJSONResponse.m */; };
+		425296EF1820231C006F9ABD /* CCHTTPModelJSONResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 425296ED1820231C006F9ABD /* CCHTTPModelJSONResponse.m */; };
 		4278B78C166B85E800D0FE59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4278B78B166B85E800D0FE59 /* Foundation.framework */; };
 		4278B791166B85E800D0FE59 /* CCKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4278B790166B85E800D0FE59 /* CCKit.h */; };
 		4278B793166B85E800D0FE59 /* CCKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4278B792166B85E800D0FE59 /* CCKit.m */; };
@@ -69,6 +73,10 @@
 		4248930016E90C8900512E78 /* OAuth+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OAuth+Additions.m"; sourceTree = "<group>"; };
 		4248930116E90C8900512E78 /* OAuthCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthCore.h; sourceTree = "<group>"; };
 		4248930216E90C8900512E78 /* OAuthCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthCore.m; sourceTree = "<group>"; };
+		425296E8182022BC006F9ABD /* CCRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCRequestModel.h; sourceTree = "<group>"; };
+		425296E9182022BC006F9ABD /* CCRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCRequestModel.m; sourceTree = "<group>"; };
+		425296EC1820231C006F9ABD /* CCHTTPModelJSONResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCHTTPModelJSONResponse.h; sourceTree = "<group>"; };
+		425296ED1820231C006F9ABD /* CCHTTPModelJSONResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCHTTPModelJSONResponse.m; sourceTree = "<group>"; };
 		4278B788166B85E800D0FE59 /* libCCKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCCKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4278B78B166B85E800D0FE59 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4278B78F166B85E800D0FE59 /* CCKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CCKit-Prefix.pch"; path = "../CCKit-Prefix.pch"; sourceTree = "<group>"; };
@@ -243,10 +251,14 @@
 				4278B7C3166B913400D0FE59 /* CCModelDelegate.h */,
 				4278B7C2166B913400D0FE59 /* CCModel.h */,
 				4278B7C4166B913400D0FE59 /* CCModel.m */,
+				425296E8182022BC006F9ABD /* CCRequestModel.h */,
+				425296E9182022BC006F9ABD /* CCRequestModel.m */,
 				4278B7D3166CD28100D0FE59 /* CCHTTPModel.h */,
 				4278B7D4166CD28100D0FE59 /* CCHTTPModel.m */,
 				4278B7D8166CD77F00D0FE59 /* CCHTTPModelResponse.h */,
 				4278B7D9166CD77F00D0FE59 /* CCHTTPModelResponse.m */,
+				425296EC1820231C006F9ABD /* CCHTTPModelJSONResponse.h */,
+				425296ED1820231C006F9ABD /* CCHTTPModelJSONResponse.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -372,9 +384,11 @@
 				424892D516E9052D00512E78 /* CCTwitterLoginManager.m in Sources */,
 				424892DC16E9060100512E78 /* TWAPIManager.m in Sources */,
 				424892DE16E9060100512E78 /* TWSignedRequest.m in Sources */,
+				425296EA182022BC006F9ABD /* CCRequestModel.m in Sources */,
 				4248930416E90C8900512E78 /* NSData+Base64.m in Sources */,
 				4248930616E90C8900512E78 /* OAuth+Additions.m in Sources */,
 				4248930816E90C8900512E78 /* OAuthCore.m in Sources */,
+				425296EE1820231C006F9ABD /* CCHTTPModelJSONResponse.m in Sources */,
 				42982A6516F38FCF001A6CEB /* CCLoadingController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,9 +397,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				425296EB182022BC006F9ABD /* CCRequestModel.m in Sources */,
 				4278B7AB166B860800D0FE59 /* main.m in Sources */,
 				4278B7AF166B860800D0FE59 /* AppDelegate.m in Sources */,
 				4278B7B9166B862D00D0FE59 /* CCKit.m in Sources */,
+				425296EF1820231C006F9ABD /* CCHTTPModelJSONResponse.m in Sources */,
 				4278B7C6166B913400D0FE59 /* CCModel.m in Sources */,
 				4278B7CA166CC8CB00D0FE59 /* CCModelViewController.m in Sources */,
 				4278B7D6166CD28100D0FE59 /* CCHTTPModel.m in Sources */,
