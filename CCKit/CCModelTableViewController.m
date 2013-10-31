@@ -33,6 +33,8 @@
         _tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         _tableView.dataSource = self;
         _tableView.delegate = self;
+        
+        _tableView.hidden = YES;
     }
     return _tableView;
 }
@@ -51,8 +53,6 @@
 - (void)viewDidLoad;
 {
     [super viewDidLoad];
-    
-    self.tableView.hidden = YES;
 }
 
 - (void)refreshDataSource;
