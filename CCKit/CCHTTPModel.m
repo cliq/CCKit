@@ -12,10 +12,10 @@
 
 @interface CCHTTPModel ()
 
-@property (nonatomic, readonly) NSString *baseUrl;
-@property (nonatomic, readonly) NSString *resource;
-@property (nonatomic, readonly) NSString *requestMethod;
-@property (nonatomic, readonly) NSString *contentType;
+@property (nonatomic, strong, readonly) NSString *baseUrl;
+@property (nonatomic, strong, readonly) NSString *resource;
+@property (nonatomic, strong, readonly) NSString *requestMethod;
+@property (nonatomic, strong, readonly) NSString *contentType;
 
 @end
 

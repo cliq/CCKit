@@ -11,7 +11,7 @@
 @interface CCHTTPModelResponse : NSObject
 
 @property (nonatomic, assign) NSInteger statusCode;
-@property (nonatomic, retain) NSError *lastError;
+@property (nonatomic, strong) NSError *lastError;
 @property (nonatomic, strong, readonly) NSHTTPURLResponse *httpResponse;
 @property (nonatomic, strong, readonly) NSData *responseData;
 

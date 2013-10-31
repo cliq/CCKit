@@ -31,11 +31,11 @@
     } _flags;
 }
 
-@property (nonatomic, retain) id<CCModel> model;
+@property (nonatomic, strong) id<CCModel> model;
 
 - (id<CCModel>)newModel;
 
-@property (nonatomic, retain) NSError* modelError;
+@property (nonatomic, strong) NSError* modelError;
 
 
 /**
