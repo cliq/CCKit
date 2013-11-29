@@ -109,6 +109,11 @@
 
 #pragma mark - To override
 
+- (BOOL)isOutdated;
+{
+    return _isOutdated;
+}
+
 - (NSString *)baseUrl;
 {
     return nil;
