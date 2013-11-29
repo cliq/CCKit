@@ -165,10 +165,6 @@
 		self.response = [self newResponseObject];
     }
 	
-	if (!more) {
-        [self.response clear];
-    }
-    
 	// Test the resulting URL
     NSURL *url = [self requestUrl];
 	if (!url) {
@@ -288,6 +284,11 @@
 
 - (void)parseResponse:(NSHTTPURLResponse *)response withData:(NSData *)data;
 {
+    // Only clear response when we got data back from server.
+    if (!self.isLoadingMore) {
+        [self.response clear];
+    }
+    
     NSError *error = [self.response parseResponse:response
                                          withData:data
                                             error:nil];
