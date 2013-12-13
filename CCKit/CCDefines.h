@@ -70,3 +70,4 @@ return shared;                                  \
 #define kCCModelErrorCodeInternal 500
 #define kCCModelErrorCodeAPI 505
 #define kCCModelErrorCodeAuthentication 510
+#define kCCModelErrorCodeCanceled 10
