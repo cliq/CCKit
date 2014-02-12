@@ -7,6 +7,7 @@
 //
 
 #import "CCTwitterLoginManager.h"
+#import "CCDefines.h"
 
 @implementation CCTwitterLoginManager
 

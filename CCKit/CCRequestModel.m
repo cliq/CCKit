@@ -7,6 +7,7 @@
 //
 
 #import "CCRequestModel.h"
+#import "CCDefines.h"
 
 @interface CCRequestModel ()
 

@@ -8,6 +8,8 @@
 
 #import "CCHTTPModelJSONResponse.h"
 
+#import "CCDefines.h"
+
 @implementation CCHTTPModelJSONResponse
 
 @synthesize parsedResponse = _parsedResponse;
@@ -44,7 +46,10 @@
     
     if (!jsonBody) {
         // Not a valid JSON string.
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunused-variable"
         NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+#pragma clang diagnostic pop
         CCLog(@"Invalid server response:\n%@", responseString);
         NSError *error = [NSError errorWithDomain:kCCModelErrorHTTPDomain
                                              code:self.statusCode

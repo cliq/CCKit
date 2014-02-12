@@ -8,6 +8,8 @@
 
 #import "CCModelTableViewController.h"
 
+#import "CCDefines.h"
+
 @interface CCModelTableViewController ()
 
 @end

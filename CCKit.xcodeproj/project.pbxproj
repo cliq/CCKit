@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2174DED718AB1510000DBAFA /* CCGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2174DED618AB1510000DBAFA /* CCGroupModel.m */; };
+		2174DEDC18AB1B8B000DBAFA /* CCTableRow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2174DED918AB1B8B000DBAFA /* CCTableRow.m */; };
+		2174DEDD18AB1B8B000DBAFA /* CCTableSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 2174DEDB18AB1B8B000DBAFA /* CCTableSection.m */; };
 		424892D516E9052D00512E78 /* CCTwitterLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 424892D416E9052D00512E78 /* CCTwitterLoginManager.m */; };
 		424892DC16E9060100512E78 /* TWAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 424892D916E9060100512E78 /* TWAPIManager.m */; };
 		424892DE16E9060100512E78 /* TWSignedRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 424892DB16E9060100512E78 /* TWSignedRequest.m */; };
@@ -60,6 +63,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2174DED518AB1510000DBAFA /* CCGroupModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCGroupModel.h; sourceTree = "<group>"; };
+		2174DED618AB1510000DBAFA /* CCGroupModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCGroupModel.m; sourceTree = "<group>"; };
+		2174DED818AB1B8B000DBAFA /* CCTableRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTableRow.h; sourceTree = "<group>"; };
+		2174DED918AB1B8B000DBAFA /* CCTableRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCTableRow.m; sourceTree = "<group>"; };
+		2174DEDA18AB1B8B000DBAFA /* CCTableSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTableSection.h; sourceTree = "<group>"; };
+		2174DEDB18AB1B8B000DBAFA /* CCTableSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCTableSection.m; sourceTree = "<group>"; };
 		424892D316E9052D00512E78 /* CCTwitterLoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTwitterLoginManager.h; sourceTree = "<group>"; };
 		424892D416E9052D00512E78 /* CCTwitterLoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCTwitterLoginManager.m; sourceTree = "<group>"; };
 		424892D816E9060100512E78 /* TWAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWAPIManager.h; sourceTree = "<group>"; };
@@ -132,6 +141,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2174DEDE18AB1BC0000DBAFA /* Tables */ = {
+			isa = PBXGroup;
+			children = (
+				2174DED818AB1B8B000DBAFA /* CCTableRow.h */,
+				2174DED918AB1B8B000DBAFA /* CCTableRow.m */,
+				2174DEDA18AB1B8B000DBAFA /* CCTableSection.h */,
+				2174DEDB18AB1B8B000DBAFA /* CCTableSection.m */,
+			);
+			name = Tables;
+			sourceTree = "<group>";
+		};
 		424892D116E9050D00512E78 /* Twitter */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +225,7 @@
 				4278B7DC166CD87000D0FE59 /* Common */,
 				4278B7C1166B912400D0FE59 /* Model */,
 				4278B7D2166CD23100D0FE59 /* View Controllers */,
+				2174DEDE18AB1BC0000DBAFA /* Tables */,
 				42982A6116F38FB3001A6CEB /* Controls */,
 				4278B790166B85E800D0FE59 /* CCKit.h */,
 				4278B792166B85E800D0FE59 /* CCKit.m */,
@@ -251,6 +272,8 @@
 				4278B7C3166B913400D0FE59 /* CCModelDelegate.h */,
 				4278B7C2166B913400D0FE59 /* CCModel.h */,
 				4278B7C4166B913400D0FE59 /* CCModel.m */,
+				2174DED518AB1510000DBAFA /* CCGroupModel.h */,
+				2174DED618AB1510000DBAFA /* CCGroupModel.m */,
 				425296E8182022BC006F9ABD /* CCRequestModel.h */,
 				425296E9182022BC006F9ABD /* CCRequestModel.m */,
 				4278B7D3166CD28100D0FE59 /* CCHTTPModel.h */,
@@ -383,12 +406,15 @@
 				429CF9D216E4CCA10098CF36 /* CCModelTableViewController.m in Sources */,
 				424892D516E9052D00512E78 /* CCTwitterLoginManager.m in Sources */,
 				424892DC16E9060100512E78 /* TWAPIManager.m in Sources */,
+				2174DEDC18AB1B8B000DBAFA /* CCTableRow.m in Sources */,
 				424892DE16E9060100512E78 /* TWSignedRequest.m in Sources */,
 				425296EA182022BC006F9ABD /* CCRequestModel.m in Sources */,
 				4248930416E90C8900512E78 /* NSData+Base64.m in Sources */,
 				4248930616E90C8900512E78 /* OAuth+Additions.m in Sources */,
 				4248930816E90C8900512E78 /* OAuthCore.m in Sources */,
+				2174DED718AB1510000DBAFA /* CCGroupModel.m in Sources */,
 				425296EE1820231C006F9ABD /* CCHTTPModelJSONResponse.m in Sources */,
+				2174DEDD18AB1B8B000DBAFA /* CCTableSection.m in Sources */,
 				42982A6516F38FCF001A6CEB /* CCLoadingController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,7 +504,7 @@
 			buildSettings = {
 				DSTROOT = /tmp/CCKit.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CCKit/CCKit-Prefix.pch";
+				GCC_PREFIX_HEADER = "CCKit-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -490,7 +516,7 @@
 			buildSettings = {
 				DSTROOT = /tmp/CCKit.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CCKit/CCKit-Prefix.pch";
+				GCC_PREFIX_HEADER = "CCKit-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

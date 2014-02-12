@@ -8,6 +8,8 @@
 
 #import "CCGroupModel.h"
 
+#import "CCDefines.h"
+
 @interface CCGroupModel ()
 
 @property (nonatomic, strong) NSMutableArray *modelsLoading;

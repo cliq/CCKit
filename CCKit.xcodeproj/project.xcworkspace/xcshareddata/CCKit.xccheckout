@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D09A0CA1-124A-4349-AF69-1E007C3D6973</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CCKit</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B497BAE4-32E7-4DED-833D-85E85F9AD3E5</key>
+		<string>ssh://cliqconsulting.unfuddle.com/cliqconsulting/cckit.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CCKit.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B497BAE4-32E7-4DED-833D-85E85F9AD3E5</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://cliqconsulting.unfuddle.com/cliqconsulting/cckit.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B497BAE4-32E7-4DED-833D-85E85F9AD3E5</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B497BAE4-32E7-4DED-833D-85E85F9AD3E5</string>
+			<key>IDESourceControlWCCName</key>
+			<string>cckit</string>
+		</dict>
+	</array>
+</dict>
+</plist>
