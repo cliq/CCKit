@@ -29,6 +29,8 @@
 #define CC_IDIOM_IPHONE    (UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPhone)
 #define CC_ORIENT_PORTRAIT  (UIInterfaceOrientationIsPortrait(interfaceOrientation))
 #define CC_ORIENT_LANDSCAPE (UIInterfaceOrientationIsLandscape(interfaceOrientation))
+#define CC_ORIENT_STATUS_BAR_PORTRAIT (UIInterfaceOrientationIsPortrait([[UIApplication sharedApplication] statusBarOrientation]))
+#define CC_ORIENT_STATUS_BAR_LANDSCAPE (UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation]))
 
 #define CCisPhone568 ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone && [UIScreen mainScreen].bounds.size.height == 568)
 #define CCiPhone568NameForImage(image) (CCisPhone568 ? [NSString stringWithFormat:@"%@-568h.%@", [image stringByDeletingPathExtension], [image pathExtension]] : image)
