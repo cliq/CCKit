@@ -147,7 +147,13 @@
 - (void)cancel;
 {
     if (self.isLoading) {
+        CCDebug(@"Canceling %@", self);
         [self.connection cancel];
+        
+        if (self.connection) {
+            self.connection = nil;
+            [self didCancelLoad];
+        }
     }
 }
 
@@ -274,6 +280,10 @@
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error;
 {
+    if (self.connection!=connection) {
+        return;
+    }
+    
     self.connection = nil;
     
     if (error.domain==NSURLErrorDomain && error.code==NSURLErrorCancelled) {
@@ -304,6 +314,10 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection;
 {
+    if (self.connection!=connection) {
+        return;
+    }
+
     self.connection = nil;
     
     [self parseResponse:(NSHTTPURLResponse *)_connectionResponse
@@ -312,12 +326,20 @@
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response;
 {
+    if (self.connection!=connection) {
+        return;
+    }
+
     _connectionResponse = response;
     _connectionResponseData = [[NSMutableData alloc] init];
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data;
 {
+    if (self.connection!=connection) {
+        return;
+    }
+
     [_connectionResponseData appendData:data];
 }
 
