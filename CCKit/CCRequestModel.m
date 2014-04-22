@@ -19,6 +19,8 @@
 
 @implementation CCRequestModel
 
+@synthesize response = _response;
+
 - (id)init
 {
     self = [super init];
@@ -167,9 +169,13 @@
     }
     
     _isLoadingMore = more;
-	
-	if (!_response) {
+    
+	if (!self.response) {
 		self.response = [self newResponseObject];
+    }
+    
+    if (!more) {
+        [self.response clear];
     }
 	
 	// Test the resulting URL
