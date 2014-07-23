@@ -114,16 +114,16 @@
     NSMutableArray *modelsToLoad = [NSMutableArray arrayWithCapacity:self.models.count];
     for (CCModel *model in self.models) {
         if (model.isOutdated || !model.isLoaded) {
-            [modelsToLoad addObject:modelsToLoad];
+            [modelsToLoad addObject:model];
         }
     }
     [self.modelsLoading removeAllObjects];
     [self.modelsLoading addObjectsFromArray:modelsToLoad];
     
     self.notifiedLoadingStarted = NO;
-    self.modelsWhichFinishedLoading = nil;
-    self.modelsWhichFailedLoading = nil;
-    self.modelsWhichCanceledLoading = nil;
+    self.modelsWhichFinishedLoading = [[NSMutableArray alloc] initWithCapacity:modelsToLoad.count];
+    self.modelsWhichFailedLoading = [[NSMutableArray alloc] initWithCapacity:modelsToLoad.count];
+    self.modelsWhichCanceledLoading = [[NSMutableArray alloc] initWithCapacity:modelsToLoad.count];
     self.modelsWhichFailedLoadingErrors = nil;
     self.isLoadingModels = YES;
     for (CCModel *model in modelsToLoad) {
@@ -178,6 +178,7 @@
     } else if (self.modelsWhichCanceledLoading.count>0) {
         [self didCancelLoad];
     }
+    self.isLoadingModels = NO;
 }
 
 
@@ -187,6 +188,7 @@
         return;
     }
     
+    CCDebug(@"Started loading: %@", model);
     if (!self.notifiedLoadingStarted) {
         self.notifiedLoadingStarted = YES;
         [self didStartLoad];
@@ -199,6 +201,7 @@
         return;
     }
     
+    CCDebug(@"Finished loading: %@", model);
     [self.modelsWhichFinishedLoading addObject:model];
     [self.modelsLoading removeObject:model];
     [self notifyDelegatesIfDone];
@@ -210,6 +213,7 @@
         return;
     }
     
+    CCDebug(@"Failed to load: %@", model);
     if (error) {
         [self.modelsWhichFailedLoadingErrors addObject:error];
     }
@@ -225,6 +229,7 @@
         [self didFinishLoad];
     }
 
+    CCDebug(@"Canceled loading: %@", model);
     [self.modelsWhichCanceledLoading addObject:model];
     [self.modelsLoading removeObject:model];
     [self notifyDelegatesIfDone];
