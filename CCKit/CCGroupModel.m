@@ -178,6 +178,7 @@
     } else if (self.modelsWhichCanceledLoading.count>0) {
         [self didCancelLoad];
     }
+    self.notifiedLoadingStarted = NO;
     self.isLoadingModels = NO;
 }
 
@@ -185,7 +186,7 @@
 - (void)modelDidStartLoad:(id<CCModel>)model;
 {
     if (![self.modelsLoading containsObject:model]) {
-        return;
+        [self.modelsLoading addObject:model];
     }
     
     CCDebug(@"Started loading: %@", model);
