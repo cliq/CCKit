@@ -28,6 +28,13 @@
 
 @synthesize models = _models;
 
+- (void)dealloc
+{
+    for (CCModel *model in self.models) {
+        [model.delegates removeObject:self];
+    }
+}
+
 - (id)init
 {
     self = [super init];
