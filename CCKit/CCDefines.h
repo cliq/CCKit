@@ -72,4 +72,6 @@ return shared;                                  \
 #define kCCModelErrorCodeInternal 500
 #define kCCModelErrorCodeAPI 505
 #define kCCModelErrorCodeAuthentication 510
+#define kCCModelErrorCodeGroupError 520 // CCModelGroup failed to load for multiple errors
 #define kCCModelErrorCodeCanceled 10
+#define kCCModelErrorGroupErrorsKey @"errors"

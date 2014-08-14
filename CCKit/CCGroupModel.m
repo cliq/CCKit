@@ -40,6 +40,10 @@
     self = [super init];
     if (self) {
         self.modelsLoading = [NSMutableArray arrayWithCapacity:2];
+        self.modelsWhichFinishedLoading = [[NSMutableArray alloc] initWithCapacity:2];
+        self.modelsWhichFailedLoading = [[NSMutableArray alloc] initWithCapacity:2];
+        self.modelsWhichCanceledLoading = [[NSMutableArray alloc] initWithCapacity:2];
+        self.modelsWhichFailedLoadingErrors = [[NSMutableArray alloc] initWithCapacity:2];
     }
     return self;
 }
@@ -50,12 +54,16 @@
         for (CCModel *model in _models) {
             [model.delegates removeObject:self];
         }
+        [self.modelsLoading removeAllObjects];
         
         _models = models;
         
         for (CCModel *model in _models) {
             if (![model.delegates containsObject:self]) {
                 [model.delegates addObject:self];
+            }
+            if (model.isLoading) {
+                [self.modelsLoading addObject:model];
             }
         }
     }
@@ -127,11 +135,9 @@
     [self.modelsLoading removeAllObjects];
     [self.modelsLoading addObjectsFromArray:modelsToLoad];
     
+    [self.modelsWhichFailedLoadingErrors removeAllObjects];
+    
     self.notifiedLoadingStarted = NO;
-    self.modelsWhichFinishedLoading = [[NSMutableArray alloc] initWithCapacity:modelsToLoad.count];
-    self.modelsWhichFailedLoading = [[NSMutableArray alloc] initWithCapacity:modelsToLoad.count];
-    self.modelsWhichCanceledLoading = [[NSMutableArray alloc] initWithCapacity:modelsToLoad.count];
-    self.modelsWhichFailedLoadingErrors = nil;
     self.isLoadingModels = YES;
     for (CCModel *model in modelsToLoad) {
         [model loadMore:more];
@@ -180,13 +186,29 @@
     if (self.modelsWhichFinishedLoading.count>0) {
         [self didFinishLoad];
     } else if (self.modelsWhichFailedLoading.count>0) {
-        NSError *error = nil; // TODO: setup error
+        NSError *error = nil;
+        if (self.modelsWhichFailedLoadingErrors.count==1) {
+            error = [self.modelsWhichFailedLoadingErrors firstObject];
+        } else {
+            NSDictionary *userInfo = nil;
+            if (self.modelsWhichFailedLoadingErrors.count>0) {
+                userInfo = [NSDictionary dictionaryWithObject:self.modelsWhichFailedLoadingErrors
+                                                       forKey:kCCModelErrorGroupErrorsKey];
+            }
+            error = [NSError errorWithDomain:kCCModelErrorDomain
+                                        code:kCCModelErrorCodeGroupError
+                                    userInfo:userInfo];
+        }
         [self didFailLoadWithError:error];
     } else if (self.modelsWhichCanceledLoading.count>0) {
         [self didCancelLoad];
     }
     self.notifiedLoadingStarted = NO;
     self.isLoadingModels = NO;
+    
+    [self.modelsWhichFinishedLoading removeAllObjects];
+    [self.modelsWhichFailedLoading removeAllObjects];
+    [self.modelsWhichCanceledLoading removeAllObjects];
 }
 
 
