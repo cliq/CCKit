@@ -173,10 +173,6 @@
 	if (!self.response) {
 		self.response = [self newResponseObject];
     }
-    
-    if (!more) {
-        [self.response clear];
-    }
 	
 	// Test the resulting URL
     NSURL *url = [self requestUrl];
