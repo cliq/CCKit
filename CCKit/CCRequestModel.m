@@ -9,6 +9,8 @@
 #import "CCRequestModel.h"
 #import "CCDefines.h"
 
+#import "CCDefines.h"
+
 @interface CCRequestModel ()
 
 @property (nonatomic, readwrite, getter = isLoadingStubData) BOOL loadingStubData;
