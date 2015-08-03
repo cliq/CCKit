@@ -34,6 +34,7 @@
 
 // Protected:
 @property (nonatomic, readonly, strong) NSURLConnection *connection;
+- (void)parseResponse:(NSHTTPURLResponse *)response withData:(NSData *)data;
 - (NSMutableDictionary *)requestHeaders;
 - (CCHTTPModelResponse *)newResponseObject;
 - (NSString *)stubJsonResponse;
