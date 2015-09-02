@@ -8,8 +8,14 @@
 
 #import "CCModel.h"
 
+typedef NS_ENUM(NSInteger, CCGroupModelLoadedType) {
+    CCGroupModelLoadedTypeAny,
+    CCGroupModelLoadedTypeAll,
+};
+
 @interface CCGroupModel : CCModel
 
+@property (nonatomic, assign) CCGroupModelLoadedType loadedType;
 @property (nonatomic, strong) NSArray *models;
 
 @property (nonatomic, strong, readonly) NSMutableArray *modelsWhichFailedLoadingErrors; // NSError *

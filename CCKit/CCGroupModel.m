@@ -39,6 +39,7 @@
 {
     self = [super init];
     if (self) {
+        self.loadedType = CCGroupModelLoadedTypeAll;
         self.modelsLoading = [NSMutableArray arrayWithCapacity:2];
         self.modelsWhichFinishedLoading = [[NSMutableArray alloc] initWithCapacity:2];
         self.modelsWhichFailedLoading = [[NSMutableArray alloc] initWithCapacity:2];
@@ -78,9 +79,20 @@
     // To return YES, all models must be loaded
     
     BOOL isLoaded = YES;
-    for (CCModel *model in self.models) {
-        isLoaded = isLoaded && model.isLoaded;
+    if (self.loadedType==CCGroupModelLoadedTypeAll) {
+        for (CCModel *model in self.models) {
+            isLoaded = isLoaded && model.isLoaded;
+        }
+    } else {
+        isLoaded = NO;
+        for (CCModel *model in self.models) {
+            if (model.isLoaded) {
+                isLoaded = YES;
+                break;
+            }
+        }
     }
+        
     return isLoaded;
 }
 
