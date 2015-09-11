@@ -14,7 +14,6 @@
 
 @property (nonatomic, strong, readonly) NSString *baseUrl;
 @property (nonatomic, strong, readonly) NSString *resource;
-@property (nonatomic, strong, readonly) NSString *contentType;
 
 @end
 

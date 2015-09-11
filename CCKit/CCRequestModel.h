@@ -29,6 +29,7 @@
 @property (nonatomic, strong) NSString *requestMethod;
 @property (nonatomic, assign) BOOL usePostBody;
 @property (nonatomic, strong) NSData *postBody;
+@property (nonatomic, strong, readonly) NSString *contentType;
 
 - (void)load:(NSURLRequestCachePolicy)cachePolicy more:(BOOL)more;
 
