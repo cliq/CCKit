@@ -266,7 +266,8 @@
 {
     self.loadingStubData = NO;
     
-    NSHTTPURLResponse *response = [[NSHTTPURLResponse alloc] initWithURL:nil
+    NSURL *url = [self requestUrl];
+    NSHTTPURLResponse *response = [[NSHTTPURLResponse alloc] initWithURL:url
                                                               statusCode:200
                                                              HTTPVersion:nil
                                                             headerFields:nil];
