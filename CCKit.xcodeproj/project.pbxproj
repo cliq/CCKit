@@ -10,6 +10,15 @@
 		2174DED718AB1510000DBAFA /* CCGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2174DED618AB1510000DBAFA /* CCGroupModel.m */; };
 		2174DEDC18AB1B8B000DBAFA /* CCTableRow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2174DED918AB1B8B000DBAFA /* CCTableRow.m */; };
 		2174DEDD18AB1B8B000DBAFA /* CCTableSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 2174DEDB18AB1B8B000DBAFA /* CCTableSection.m */; };
+		2179A4EC1C9A2E7500C4D0E4 /* CCCollectionViewFlowLayoutAligned.m in Sources */ = {isa = PBXBuildFile; fileRef = 2179A4E71C9A2E7500C4D0E4 /* CCCollectionViewFlowLayoutAligned.m */; };
+		2179A4ED1C9A2E7500C4D0E4 /* CCCollectionViewPagedLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2179A4E91C9A2E7500C4D0E4 /* CCCollectionViewPagedLayout.m */; };
+		2179A4EE1C9A2E7500C4D0E4 /* CCCollectionViewDropShadowFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2179A4EB1C9A2E7500C4D0E4 /* CCCollectionViewDropShadowFlowLayout.m */; };
+		218837C01C9CA29A00864922 /* CCDropShadowDecorationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 218837BF1C9CA29A00864922 /* CCDropShadowDecorationView.m */; };
+		218837C71C9CA2E300864922 /* CCCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 218837C21C9CA2E300864922 /* CCCollectionViewCell.m */; };
+		218837C81C9CA2E300864922 /* CCCollectionHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 218837C41C9CA2E300864922 /* CCCollectionHeaderCell.m */; };
+		218837C91C9CA2E300864922 /* CCCollectionFooterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 218837C61C9CA2E300864922 /* CCCollectionFooterCell.m */; };
+		218837D01C9CA37200864922 /* CCGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 218837CD1C9CA37200864922 /* CCGradientView.m */; };
+		218837D11C9CA37200864922 /* CCInsetLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 218837CF1C9CA37200864922 /* CCInsetLabel.m */; };
 		424892D516E9052D00512E78 /* CCTwitterLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 424892D416E9052D00512E78 /* CCTwitterLoginManager.m */; };
 		424892DC16E9060100512E78 /* TWAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 424892D916E9060100512E78 /* TWAPIManager.m */; };
 		424892DE16E9060100512E78 /* TWSignedRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 424892DB16E9060100512E78 /* TWSignedRequest.m */; };
@@ -69,6 +78,24 @@
 		2174DED918AB1B8B000DBAFA /* CCTableRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCTableRow.m; sourceTree = "<group>"; };
 		2174DEDA18AB1B8B000DBAFA /* CCTableSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTableSection.h; sourceTree = "<group>"; };
 		2174DEDB18AB1B8B000DBAFA /* CCTableSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCTableSection.m; sourceTree = "<group>"; };
+		2179A4E61C9A2E7500C4D0E4 /* CCCollectionViewFlowLayoutAligned.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCollectionViewFlowLayoutAligned.h; sourceTree = "<group>"; };
+		2179A4E71C9A2E7500C4D0E4 /* CCCollectionViewFlowLayoutAligned.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCollectionViewFlowLayoutAligned.m; sourceTree = "<group>"; };
+		2179A4E81C9A2E7500C4D0E4 /* CCCollectionViewPagedLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCollectionViewPagedLayout.h; sourceTree = "<group>"; };
+		2179A4E91C9A2E7500C4D0E4 /* CCCollectionViewPagedLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCollectionViewPagedLayout.m; sourceTree = "<group>"; };
+		2179A4EA1C9A2E7500C4D0E4 /* CCCollectionViewDropShadowFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCollectionViewDropShadowFlowLayout.h; sourceTree = "<group>"; };
+		2179A4EB1C9A2E7500C4D0E4 /* CCCollectionViewDropShadowFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCollectionViewDropShadowFlowLayout.m; sourceTree = "<group>"; };
+		218837BE1C9CA29A00864922 /* CCDropShadowDecorationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCDropShadowDecorationView.h; sourceTree = "<group>"; };
+		218837BF1C9CA29A00864922 /* CCDropShadowDecorationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCDropShadowDecorationView.m; sourceTree = "<group>"; };
+		218837C11C9CA2E300864922 /* CCCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCollectionViewCell.h; sourceTree = "<group>"; };
+		218837C21C9CA2E300864922 /* CCCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCollectionViewCell.m; sourceTree = "<group>"; };
+		218837C31C9CA2E300864922 /* CCCollectionHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCollectionHeaderCell.h; sourceTree = "<group>"; };
+		218837C41C9CA2E300864922 /* CCCollectionHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCollectionHeaderCell.m; sourceTree = "<group>"; };
+		218837C51C9CA2E300864922 /* CCCollectionFooterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCollectionFooterCell.h; sourceTree = "<group>"; };
+		218837C61C9CA2E300864922 /* CCCollectionFooterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCollectionFooterCell.m; sourceTree = "<group>"; };
+		218837CC1C9CA37200864922 /* CCGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCGradientView.h; sourceTree = "<group>"; };
+		218837CD1C9CA37200864922 /* CCGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCGradientView.m; sourceTree = "<group>"; };
+		218837CE1C9CA37200864922 /* CCInsetLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCInsetLabel.h; sourceTree = "<group>"; };
+		218837CF1C9CA37200864922 /* CCInsetLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCInsetLabel.m; sourceTree = "<group>"; };
 		424892D316E9052D00512E78 /* CCTwitterLoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTwitterLoginManager.h; sourceTree = "<group>"; };
 		424892D416E9052D00512E78 /* CCTwitterLoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCTwitterLoginManager.m; sourceTree = "<group>"; };
 		424892D816E9060100512E78 /* TWAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWAPIManager.h; sourceTree = "<group>"; };
@@ -152,6 +179,53 @@
 			name = Tables;
 			sourceTree = "<group>";
 		};
+		2179A4E51C9A2E6200C4D0E4 /* Collection Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				2179A4E61C9A2E7500C4D0E4 /* CCCollectionViewFlowLayoutAligned.h */,
+				2179A4E71C9A2E7500C4D0E4 /* CCCollectionViewFlowLayoutAligned.m */,
+				2179A4E81C9A2E7500C4D0E4 /* CCCollectionViewPagedLayout.h */,
+				2179A4E91C9A2E7500C4D0E4 /* CCCollectionViewPagedLayout.m */,
+				2179A4EA1C9A2E7500C4D0E4 /* CCCollectionViewDropShadowFlowLayout.h */,
+				2179A4EB1C9A2E7500C4D0E4 /* CCCollectionViewDropShadowFlowLayout.m */,
+			);
+			name = "Collection Layouts";
+			sourceTree = "<group>";
+		};
+		218837BD1C9CA27F00864922 /* Collection Cells */ = {
+			isa = PBXGroup;
+			children = (
+				218837CA1C9CA33900864922 /* Common */,
+				218837BE1C9CA29A00864922 /* CCDropShadowDecorationView.h */,
+				218837BF1C9CA29A00864922 /* CCDropShadowDecorationView.m */,
+			);
+			name = "Collection Cells";
+			sourceTree = "<group>";
+		};
+		218837CA1C9CA33900864922 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				218837C11C9CA2E300864922 /* CCCollectionViewCell.h */,
+				218837C21C9CA2E300864922 /* CCCollectionViewCell.m */,
+				218837C31C9CA2E300864922 /* CCCollectionHeaderCell.h */,
+				218837C41C9CA2E300864922 /* CCCollectionHeaderCell.m */,
+				218837C51C9CA2E300864922 /* CCCollectionFooterCell.h */,
+				218837C61C9CA2E300864922 /* CCCollectionFooterCell.m */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		218837CB1C9CA36700864922 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				218837CC1C9CA37200864922 /* CCGradientView.h */,
+				218837CD1C9CA37200864922 /* CCGradientView.m */,
+				218837CE1C9CA37200864922 /* CCInsetLabel.h */,
+				218837CF1C9CA37200864922 /* CCInsetLabel.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		424892D116E9050D00512E78 /* Twitter */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +295,9 @@
 		4278B78D166B85E800D0FE59 /* CCKit */ = {
 			isa = PBXGroup;
 			children = (
+				218837CB1C9CA36700864922 /* Views */,
+				218837BD1C9CA27F00864922 /* Collection Cells */,
+				2179A4E51C9A2E6200C4D0E4 /* Collection Layouts */,
 				424892D116E9050D00512E78 /* Twitter */,
 				4278B7DC166CD87000D0FE59 /* Common */,
 				4278B7C1166B912400D0FE59 /* Model */,
@@ -402,19 +479,28 @@
 				4278B7C5166B913400D0FE59 /* CCModel.m in Sources */,
 				4278B7C9166CC8CB00D0FE59 /* CCModelViewController.m in Sources */,
 				4278B7D5166CD28100D0FE59 /* CCHTTPModel.m in Sources */,
+				218837D01C9CA37200864922 /* CCGradientView.m in Sources */,
 				4278B7DA166CD77F00D0FE59 /* CCHTTPModelResponse.m in Sources */,
+				218837C01C9CA29A00864922 /* CCDropShadowDecorationView.m in Sources */,
 				429CF9D216E4CCA10098CF36 /* CCModelTableViewController.m in Sources */,
+				2179A4EE1C9A2E7500C4D0E4 /* CCCollectionViewDropShadowFlowLayout.m in Sources */,
 				424892D516E9052D00512E78 /* CCTwitterLoginManager.m in Sources */,
+				218837D11C9CA37200864922 /* CCInsetLabel.m in Sources */,
 				424892DC16E9060100512E78 /* TWAPIManager.m in Sources */,
+				2179A4ED1C9A2E7500C4D0E4 /* CCCollectionViewPagedLayout.m in Sources */,
+				218837C71C9CA2E300864922 /* CCCollectionViewCell.m in Sources */,
 				2174DEDC18AB1B8B000DBAFA /* CCTableRow.m in Sources */,
 				424892DE16E9060100512E78 /* TWSignedRequest.m in Sources */,
 				425296EA182022BC006F9ABD /* CCRequestModel.m in Sources */,
+				218837C91C9CA2E300864922 /* CCCollectionFooterCell.m in Sources */,
 				4248930416E90C8900512E78 /* NSData+Base64.m in Sources */,
+				218837C81C9CA2E300864922 /* CCCollectionHeaderCell.m in Sources */,
 				4248930616E90C8900512E78 /* OAuth+Additions.m in Sources */,
 				4248930816E90C8900512E78 /* OAuthCore.m in Sources */,
 				2174DED718AB1510000DBAFA /* CCGroupModel.m in Sources */,
 				425296EE1820231C006F9ABD /* CCHTTPModelJSONResponse.m in Sources */,
 				2174DEDD18AB1B8B000DBAFA /* CCTableSection.m in Sources */,
+				2179A4EC1C9A2E7500C4D0E4 /* CCCollectionViewFlowLayoutAligned.m in Sources */,
 				42982A6516F38FCF001A6CEB /* CCLoadingController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
