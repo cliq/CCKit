@@ -1,13 +1,13 @@
 Pod::Spec.new do |s|
   s.name         = "CCKit"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "Cliq Consulting reusable components for iOS."
 
   s.description  = <<-DESC
                    Helpers, MACROS and MVC iOS components provided by Cliq Consulting.
 
                    * Lifecycle management for network based models
-                   * Twitter Login Manager
+                   * Common views, view controllers, collection layouts, collection cells and helpers
                    DESC
 
   s.homepage     = "http://cliqconsulting.com"
@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.authors      = { "Glenn Marcus" => "glenn@cliqconsulting.com", "Leonardo Lobato" => "leo@cliqconsulting.com" }
   s.social_media_url = "http://twitter.com/cliqconsulting"
 
-  s.platform     = :ios, '6.0'
+  s.platform     = :ios, '7.0'
   
   s.source       = { :git => "git@cliqconsulting.unfuddle.com:cliqconsulting/cckit.git", :tag => s.version.to_s }
   s.source_files  = 'CCKit/**/*.{h,m}'
