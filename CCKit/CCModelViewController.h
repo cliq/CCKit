@@ -127,6 +127,11 @@
 - (void)invalidateView;
 
 /**
+ * Reset all view flag. To be used if the view was recreated and needs to have its state updated.
+ */
+- (void)resetViewStates;
+
+/**
  * Immediately creates, loads, and displays the model (if it was not already).
  * Will reload model if self.shouldReload==YES and it is outdated (model.isOutdated==YES).
  */
