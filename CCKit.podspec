@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "CCKit"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "Cliq Consulting reusable components for iOS."
 
   s.description  = <<-DESC
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, '7.0'
   
-  s.source       = { :git => "git@cliqconsulting.unfuddle.com:cliqconsulting/cckit.git", :tag => s.version.to_s }
+  s.source       = { :git => "https://github.com/cliq/CCKit.git", :tag => s.version.to_s }
   s.source_files  = 'CCKit/**/*.{h,m}'
   s.exclude_files = 'CCKit/CCTwitterLoginManager.{h,m}', 'CCKit/OAuthCore/*', 'CCKit/TWiOSReverseAuth/*'
   s.requires_arc = true
