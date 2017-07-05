@@ -20,6 +20,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/cliq/CCKit.git", :tag => s.version.to_s }
   s.source_files  = 'CCKit/**/*.{h,m}'
   s.exclude_files = 'CCKit/CCTwitterLoginManager.{h,m}', 'CCKit/OAuthCore/*', 'CCKit/TWiOSReverseAuth/*'
+  s.library = 'z'
   s.requires_arc = true
   s.ios.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/../../CCKit/**' }
 
