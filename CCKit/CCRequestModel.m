@@ -260,6 +260,27 @@
     return _isLoaded;
 }
 
+- (void)didFinishLoad;
+{
+    [super didFinishLoad];
+    
+    _isLoadingMore = NO;
+}
+
+- (void)didFailLoadWithError:(NSError *)error;
+{
+    [super didFailLoadWithError:error];
+    
+    _isLoadingMore = NO;
+}
+
+- (void)didCancelLoad;
+{
+    [super didCancelLoad];
+    
+    _isLoadingMore = NO;
+}
+
 #pragma mark - Stub data
 
 - (void)processStubResponse:(NSString *)json;
