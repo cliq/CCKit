@@ -25,7 +25,7 @@
 
 - (void)dealloc;
 {
-    [self.model.delegates removeObject:self];
+    [_model.delegates removeObject:self];
 }
 
 - (void)viewDidLoad
