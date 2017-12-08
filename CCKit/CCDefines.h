@@ -32,6 +32,7 @@
 #define CC_ORIENT_STATUS_BAR_PORTRAIT (UIInterfaceOrientationIsPortrait([[UIApplication sharedApplication] statusBarOrientation]))
 #define CC_ORIENT_STATUS_BAR_LANDSCAPE (UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation]))
 
+#define CCisPhone812 ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone && (([UIScreen mainScreen].bounds.size.height >= 812) || ([UIScreen mainScreen].bounds.size.width == 667)))
 #define CCisPhone736 ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone && (([UIScreen mainScreen].bounds.size.height >= 736) || ([UIScreen mainScreen].bounds.size.width >= 736)))
 #define CCisPhone667 ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone && (([UIScreen mainScreen].bounds.size.height == 667) || ([UIScreen mainScreen].bounds.size.width == 667)))
 #define CCisPhone568 ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone && (([UIScreen mainScreen].bounds.size.height == 568) || ([UIScreen mainScreen].bounds.size.width == 568)))
