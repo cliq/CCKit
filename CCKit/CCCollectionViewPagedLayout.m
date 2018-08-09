@@ -20,7 +20,7 @@
             // Cells
 
             // Calculate the distance to displayed center
-            CGFloat itemCenterDistanceToViewCenter = fabsf(attributes.center.x - CGRectGetMidX(self.collectionView.bounds));
+            CGFloat itemCenterDistanceToViewCenter = fabs(attributes.center.x - CGRectGetMidX(self.collectionView.bounds));
             
             if (itemCenterDistanceToViewCenter == 0) {
                 // This item is now the focused item
@@ -82,7 +82,7 @@
             continue;
         }
         
-        if (fabsf(attributes.center.x - proposedContentOffsetCenterX) < fabsf(candidateAttributes.center.x - proposedContentOffsetCenterX))
+        if (fabs(attributes.center.x - proposedContentOffsetCenterX) < fabs(candidateAttributes.center.x - proposedContentOffsetCenterX))
         {
             candidateAttributes = attributes;
         }

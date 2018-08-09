@@ -16,6 +16,8 @@
 
 @implementation CCGradientView
 
+@dynamic layer;
+
 #pragma mark NSObject
 
 + (Class)layerClass
