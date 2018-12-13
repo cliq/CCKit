@@ -31,10 +31,10 @@
 @property (nonatomic, strong) NSData *postBody;
 @property (nonatomic, strong, readonly) NSString *contentType;
 
+- (void)setURLSessionConfiguration:(NSURLSessionConfiguration *)configuration;
 - (void)load:(NSURLRequestCachePolicy)cachePolicy more:(BOOL)more;
 
 // Protected:
-@property (nonatomic, readonly, strong) NSURLConnection *connection;
 - (void)parseResponse:(NSHTTPURLResponse *)response withData:(NSData *)data;
 - (NSMutableDictionary *)requestHeaders;
 - (CCHTTPModelResponse *)newResponseObject;

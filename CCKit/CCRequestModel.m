@@ -11,11 +11,12 @@
 
 #import "CCDefines.h"
 
-@interface CCRequestModel ()
+@interface CCRequestModel () <NSURLSessionTaskDelegate, NSURLSessionDownloadDelegate>
 
 @property (nonatomic, readwrite, getter = isLoadingStubData) BOOL loadingStubData;
 
-@property (nonatomic, readwrite, strong) NSURLConnection *connection;
+@property (nonatomic, readwrite, strong) NSURLSession *session;
+@property (nonatomic, readwrite, strong) NSURLSessionDownloadTask *downloadTask;
 
 @end
 
@@ -27,10 +28,20 @@
 {
     self = [super init];
     if (self) {
+        self.session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]
+                                                     delegate:self
+                                                delegateQueue:nil];
         self.timeoutInterval = 60;
         self.requestMethod = @"GET";
     }
     return self;
+}
+
+- (void)setURLSessionConfiguration:(NSURLSessionConfiguration *)configuration;
+{
+    self.session = [NSURLSession sessionWithConfiguration:configuration
+                                                 delegate:self
+                                            delegateQueue:nil];
 }
 
 #pragma mark - Support methods
@@ -152,10 +163,11 @@
 {
     if (self.isLoading) {
         CCDebug(@"Canceling %@", self);
-        [self.connection cancel];
+        [self.session invalidateAndCancel];
         
-        if (self.connection) {
-            self.connection = nil;
+        if (self.session) {
+            self.session = nil;
+            self.downloadTask = nil;
             [self didCancelLoad];
         }
     }
@@ -232,22 +244,17 @@
 #endif
     
     // Create the request
-    NSURLConnection *connection = [NSURLConnection connectionWithRequest:request delegate:self];
-    [self.connection cancel];
+    self.downloadTask = [self.session downloadTaskWithRequest:request];
     
-    self.connection = connection;
-    [self.connection start];
-    
-    if (self.connection==connection) {
-        [self didStartLoad];
-    }
+    [self.downloadTask resume];
+    [self didStartLoad];
 }
 
 #pragma mark - CCModel
 
 - (BOOL)isLoading;
 {
-    return (self.connection!=nil || self.isLoadingStubData);
+    return (self.downloadTask != nil || self.isLoadingStubData);
 }
 
 - (BOOL)isLoadingMore;
@@ -302,71 +309,49 @@
     return nil;
 }
 
-#pragma mark - NSURLConnectionDelegate
+#pragma mark - NSURLSessionTaskDelegate
 
-- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error;
+// TODO: this should be thread agnostic
+- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error;
 {
-    if (self.connection!=connection) {
+    self.downloadTask = nil;
+    
+    if (error && error.domain == NSURLErrorDomain && error.code == NSURLErrorCancelled) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self didCancelLoad];
+        });
         return;
     }
-    
-    self.connection = nil;
-    
-    if (error.domain==NSURLErrorDomain && error.code==NSURLErrorCancelled) {
-        [self didCancelLoad];
-    } else {
-        [self didFailLoadWithError:error];
+
+    if (error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self didFailLoadWithError:error];
+        });
+        return;
     }
 }
 
-- (void)parseResponse:(NSHTTPURLResponse *)response withData:(NSData *)data;
+#pragma mark - NSURLSessionDownloadDelegate
+
+- (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didFinishDownloadingToURL:(NSURL *)location;
 {
-    // Only clear response when we got data back from server.
-    if (!self.isLoadingMore) {
-        [self.response clear];
-    }
-    
-    NSError *error = [self.response parseResponse:response
+    // TODO: move to different thread not to block SessionDownloadDelegate thread
+    NSData *data = [NSData dataWithContentsOfURL:location];
+    NSError *error = [self.response parseResponse:downloadTask.response
                                          withData:data
                                             error:nil];
-    
+
     if (error) {
-        [self didFailLoadWithError:error];
-    } else {
-        _isLoaded = YES;
-        [self didFinishLoad];
-    }
-}
-
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection;
-{
-    if (self.connection!=connection) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self didFailLoadWithError:error];
+        });
         return;
     }
-
-    self.connection = nil;
     
-    [self parseResponse:(NSHTTPURLResponse *)_connectionResponse
-               withData:_connectionResponseData];
-}
-
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response;
-{
-    if (self.connection!=connection) {
-        return;
-    }
-
-    _connectionResponse = response;
-    _connectionResponseData = [[NSMutableData alloc] init];
-}
-
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data;
-{
-    if (self.connection!=connection) {
-        return;
-    }
-
-    [_connectionResponseData appendData:data];
+    _isLoaded = YES;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self didFinishLoad];
+    });
 }
 
 @end
