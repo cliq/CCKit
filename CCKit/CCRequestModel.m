@@ -245,9 +245,16 @@
     
     // Create the request
     self.downloadTask = [self.session downloadTaskWithRequest:request];
+
+    [self willStartDownloadTask:self.downloadTask];
     
     [self.downloadTask resume];
     [self didStartLoad];
+}
+
+- (void)willStartDownloadTask:(NSURLSessionDownloadTask *)downloadTask;
+{
+    // To override
 }
 
 #pragma mark - CCModel
