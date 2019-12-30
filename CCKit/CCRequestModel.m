@@ -9,7 +9,7 @@
 #import "CCRequestModel.h"
 #import "CCDefines.h"
 
-#import "CCDefines.h"
+#import "NSURLRequest+cURL.h"
 
 @interface CCRequestModel ()
 
@@ -188,7 +188,7 @@
 	
 	NSString *method = [self requestMethod];
 	
-    CCLog(@"Request URL (%@): %@", method, url);
+    CCLog(@"%@: Request URL (%@): %@", self, method, url);
     
 	// Make request.
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url
@@ -201,7 +201,6 @@
 	if ([self usePostBody]) {
         NSData *httpBody = [self postBody];
         if (httpBody) {
-            CCLog(@"POST body:\n%@", [[NSString alloc] initWithData:httpBody encoding:NSUTF8StringEncoding]);
             [request setHTTPBody:httpBody];
         }
         
@@ -211,6 +210,11 @@
         id value = [requestHeaders objectForKey:key];
         [request setValue:value forHTTPHeaderField:key];
     }
+    
+#if DEBUG
+    NSString *curl = [request curlDescription];
+    CCLog(@"%@: %@", self, curl);
+#endif
     
     // Clear
     _connectionResponse = nil;
