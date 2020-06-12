@@ -31,10 +31,14 @@
 @property (nonatomic, strong) NSData *postBody;
 @property (nonatomic, strong, readonly) NSString *contentType;
 
+@property (nonatomic, readonly, strong) NSURLSession *session;
+@property (nonatomic, readonly, strong) NSURLSessionDownloadTask *downloadTask;
+
+- (void)setURLSessionConfiguration:(NSURLSessionConfiguration *)configuration;
 - (void)load:(NSURLRequestCachePolicy)cachePolicy more:(BOOL)more;
 
 // Protected:
-@property (nonatomic, readonly, strong) NSURLConnection *connection;
+- (void)willStartDownloadTask:(NSURLSessionDownloadTask *)downloadTask;
 - (void)parseResponse:(NSHTTPURLResponse *)response withData:(NSData *)data;
 - (NSMutableDictionary *)requestHeaders;
 - (CCHTTPModelResponse *)newResponseObject;
