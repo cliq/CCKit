@@ -62,12 +62,9 @@
             if (!stringValue)
                 continue;
             
-            // TODO: validate memory management with __bridge
-            NSString *value = (__bridge NSString*)CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
-                                                                                          (CFStringRef)stringValue,
-                                                                                          NULL,
-                                                                                          (CFStringRef)@"!*'();:@&=+$,/?%#[]",
-                                                                                          kCFStringEncodingUTF8);
+            NSMutableCharacterSet *allowed = [[NSCharacterSet URLQueryAllowedCharacterSet] mutableCopy];
+            [allowed removeCharactersInString:@"!*'();:@&=+$,/?%#[]"];
+            NSString *value = [stringValue stringByAddingPercentEncodingWithAllowedCharacters:allowed];
             [urlString appendFormat:@"%@=%@", key, value];
         }
     }
