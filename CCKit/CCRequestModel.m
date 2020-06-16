@@ -258,6 +258,11 @@
     // To override
 }
 
+- (void)parseResponse:(NSHTTPURLResponse *)response withData:(NSData *)data;
+{
+    // To override
+}
+
 #pragma mark - CCModel
 
 - (BOOL)isLoading;
@@ -345,7 +350,7 @@
 {
     // TODO: move to different thread not to block SessionDownloadDelegate thread
     NSData *data = [NSData dataWithContentsOfURL:location];
-    NSError *error = [self.response parseResponse:downloadTask.response
+    NSError *error = [self.response parseResponse:(NSHTTPURLResponse *)downloadTask.response
                                          withData:data
                                             error:nil];
 
