@@ -17,6 +17,7 @@
 
 @property (nonatomic, readwrite, strong) NSURLSession *session;
 @property (nonatomic, readwrite, strong) NSURLSessionDownloadTask *downloadTask;
+@property (nonatomic, readwrite, strong) NSURLSessionConfiguration *sessionConfiguration;
 
 @end
 
@@ -28,9 +29,6 @@
 {
     self = [super init];
     if (self) {
-        self.session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]
-                                                     delegate:self
-                                                delegateQueue:nil];
         self.timeoutInterval = 60;
         self.requestMethod = @"GET";
     }
@@ -39,9 +37,27 @@
 
 - (void)setURLSessionConfiguration:(NSURLSessionConfiguration *)configuration;
 {
-    self.session = [NSURLSession sessionWithConfiguration:configuration
-                                                 delegate:self
-                                            delegateQueue:nil];
+    self.sessionConfiguration = configuration;
+    if (_session) {
+        [_session invalidateAndCancel];
+        _session = nil;
+    }
+}
+
+- (NSURLSession *)session;
+{
+    if (!_session) {
+        if (self.sessionConfiguration) {
+            _session = [NSURLSession sessionWithConfiguration:self.sessionConfiguration
+                                                     delegate:self
+                                                delegateQueue:nil];
+        } else {
+            _session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]
+                                                     delegate:self
+                                                delegateQueue:nil];
+        }
+    }
+    return _session;
 }
 
 #pragma mark - Support methods
@@ -160,13 +176,13 @@
 {
     if (self.isLoading) {
         CCDebug(@"Canceling %@", self);
-        [self.session invalidateAndCancel];
         
-        if (self.session) {
-            self.session = nil;
-            self.downloadTask = nil;
-            [self didCancelLoad];
+        if (_session) {
+            [_session invalidateAndCancel];
+            _session = nil;
         }
+        self.downloadTask = nil;
+        [self didCancelLoad];
     }
 }
 
@@ -250,7 +266,13 @@
     [self willStartDownloadTask:self.downloadTask];
     
     [self.downloadTask resume];
-    [self didStartLoad];
+    if (self.downloadTask) {
+        [self didStartLoad];
+    } else {
+        [self didFailLoadWithError:[NSError errorWithDomain:kCCModelErrorDomain
+                                                       code:kCCModelErrorCodeInternal
+                                                   userInfo:[NSDictionary dictionaryWithObject:@"Unable to create request." forKey:NSLocalizedDescriptionKey]]];
+    }
 }
 
 - (void)willStartDownloadTask:(NSURLSessionDownloadTask *)downloadTask;
@@ -329,7 +351,7 @@
 {
     self.downloadTask = nil;
     
-    if (error && error.domain == NSURLErrorDomain && error.code == NSURLErrorCancelled) {
+    if (error && [error.domain isEqualToString:NSURLErrorDomain] && error.code == NSURLErrorCancelled) {
         dispatch_async(dispatch_get_main_queue(), ^{
             [self didCancelLoad];
         });

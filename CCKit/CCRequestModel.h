@@ -33,6 +33,7 @@
 
 @property (nonatomic, readonly, strong) NSURLSession *session;
 @property (nonatomic, readonly, strong) NSURLSessionDownloadTask *downloadTask;
+@property (nonatomic, readonly, strong) NSURLSessionConfiguration *sessionConfiguration;
 
 - (void)setURLSessionConfiguration:(NSURLSessionConfiguration *)configuration;
 - (void)load:(NSURLRequestCachePolicy)cachePolicy more:(BOOL)more;
