@@ -191,6 +191,9 @@
         return;
     }
 
+    self.notifiedLoadingStarted = NO;
+    self.isLoadingModels = NO;
+    
     // If at least one finished loading, didFinishLoad
     // If none finished loading but at least one failed to load, didFailLoadWithError:
     // If none failed loading but at least one was canceled, didCancelLoad.
@@ -215,8 +218,6 @@
     } else if (self.modelsWhichCanceledLoading.count>0) {
         [self didCancelLoad];
     }
-    self.notifiedLoadingStarted = NO;
-    self.isLoadingModels = NO;
     
     [self.modelsWhichFinishedLoading removeAllObjects];
     [self.modelsWhichFailedLoading removeAllObjects];
