@@ -370,6 +370,8 @@
 
 - (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didFinishDownloadingToURL:(NSURL *)location;
 {
+    self.downloadTask = nil;
+
     // TODO: move to different thread not to block SessionDownloadDelegate thread
     NSData *data = [NSData dataWithContentsOfURL:location];
     NSError *error = [self.response parseResponse:(NSHTTPURLResponse *)downloadTask.response
