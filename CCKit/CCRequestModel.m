@@ -282,7 +282,21 @@
 
 - (void)parseResponse:(NSHTTPURLResponse *)response withData:(NSData *)data;
 {
-    // To override
+    // Only clear response when we got data back from server.
+    if (!self.isLoadingMore) {
+        [self.response clear];
+    }
+    
+    NSError *error = [self.response parseResponse:response
+                                         withData:data
+                                            error:nil];
+    
+    if (error) {
+        [self didFailLoadWithError:error];
+    } else {
+        _isLoaded = YES;
+        [self didFinishLoad];
+    }
 }
 
 #pragma mark - CCModel
@@ -349,45 +363,27 @@
 // TODO: this should be thread agnostic
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error;
 {
-    self.downloadTask = nil;
-    
-    if (error && [error.domain isEqualToString:NSURLErrorDomain] && error.code == NSURLErrorCancelled) {
-        dispatch_async(dispatch_get_main_queue(), ^{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.downloadTask = nil;
+        
+        if (error && [error.domain isEqualToString:NSURLErrorDomain] && error.code == NSURLErrorCancelled) {
             [self didCancelLoad];
-        });
-        return;
-    }
-
-    if (error) {
-        dispatch_async(dispatch_get_main_queue(), ^{
+        } else if (error) {
             [self didFailLoadWithError:error];
-        });
-        return;
-    }
+        }
+    });
 }
 
 #pragma mark - NSURLSessionDownloadDelegate
 
 - (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didFinishDownloadingToURL:(NSURL *)location;
 {
-    self.downloadTask = nil;
-
-    // TODO: move to different thread not to block SessionDownloadDelegate thread
     NSData *data = [NSData dataWithContentsOfURL:location];
-    NSError *error = [self.response parseResponse:(NSHTTPURLResponse *)downloadTask.response
-                                         withData:data
-                                            error:nil];
-
-    if (error) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self didFailLoadWithError:error];
-        });
-        return;
-    }
     
-    _isLoaded = YES;
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self didFinishLoad];
+        self.downloadTask = nil;
+        
+        [self parseResponse:(NSHTTPURLResponse *)downloadTask.response withData:data];
     });
 }
 
