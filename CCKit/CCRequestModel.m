@@ -38,10 +38,7 @@
 - (void)setURLSessionConfiguration:(NSURLSessionConfiguration *)configuration;
 {
     self.sessionConfiguration = configuration;
-    if (_session) {
-        [_session invalidateAndCancel];
-        _session = nil;
-    }
+    [self abort];
 }
 
 - (NSURLSession *)session;
@@ -176,14 +173,19 @@
 {
     if (self.isLoading) {
         CCDebug(@"Canceling %@", self);
-        
-        if (_session) {
-            [_session invalidateAndCancel];
-            _session = nil;
-        }
-        self.downloadTask = nil;
+
+        [self abort];
         [self didCancelLoad];
     }
+}
+
+- (void)abort;
+{
+    if (_session) {
+        [_session invalidateAndCancel];
+        _session = nil;
+    }
+    self.downloadTask = nil;
 }
 
 - (void)load:(NSURLRequestCachePolicy)cachePolicy more:(BOOL)more;

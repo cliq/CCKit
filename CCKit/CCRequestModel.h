@@ -45,4 +45,6 @@
 - (CCHTTPModelResponse *)newResponseObject;
 - (NSString *)stubJsonResponse;
 
+- (void)abort; // Cancels without notifying delegates
+
 @end
