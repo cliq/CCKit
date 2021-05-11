@@ -238,7 +238,7 @@
         [request setValue:value forHTTPHeaderField:key];
     }
     
-#if DEBUG
+#if defined(ADHOC) || defined(DEBUG)
     NSString *curl = [request curlDescription];
     CCLog(@"%@: %@", self, curl);
 #endif
