@@ -9,6 +9,7 @@
 #import "CCHTTPModelJSONResponse.h"
 
 #import "CCDefines.h"
+#import <FirebaseCrashlytics/FirebaseCrashlytics.h>
 
 @implementation CCHTTPModelJSONResponse
 
@@ -50,7 +51,7 @@
 #pragma clang diagnostic ignored "-Wunused-variable"
         NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
 #pragma clang diagnostic pop
-        CCLog(@"Invalid server response:\n%@", responseString);
+        CCDebug(@"Invalid server response:\n%@", responseString);
         NSError *error = [NSError errorWithDomain:kCCModelErrorHTTPDomain
                                              code:self.statusCode
                                          userInfo:[NSDictionary dictionaryWithObject:@"Invalid server response."

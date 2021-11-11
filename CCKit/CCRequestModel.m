@@ -172,7 +172,7 @@
 - (void)cancel;
 {
     if (self.isLoading) {
-        CCDebug(@"Canceling %@", self);
+        CCLog(@"Canceling %@", self);
 
         [self abort];
         [self didCancelLoad];

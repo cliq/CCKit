@@ -134,7 +134,7 @@
 - (void)loadMore:(BOOL)more;
 {
     if (self.isLoadingModels) {
-        CCDebug(@"Group model is already loading.");
+        CCLog(@"Group model is already loading.");
         return;
     }
     
@@ -231,7 +231,7 @@
         [self.modelsLoading addObject:model];
     }
     
-    CCDebug(@"Started loading: %@", model);
+    CCLog(@"Started loading: %@", model);
     if (!self.notifiedLoadingStarted) {
         self.notifiedLoadingStarted = YES;
         [self didStartLoad];
@@ -244,7 +244,7 @@
         return;
     }
     
-    CCDebug(@"Finished loading: %@", model);
+    CCLog(@"Finished loading: %@", model);
     [self.modelsWhichFinishedLoading addObject:model];
     [self.modelsLoading removeObject:model];
     [self notifyDelegatesIfDone];
@@ -256,7 +256,7 @@
         return;
     }
     
-    CCDebug(@"Failed to load: %@", model);
+    CCLog(@"Failed to load: %@", model);
     if (error) {
         [self.modelsWhichFailedLoadingErrors addObject:error];
     }
@@ -272,7 +272,7 @@
         [self didFinishLoad];
     }
 
-    CCDebug(@"Canceled loading: %@", model);
+    CCLog(@"Canceled loading: %@", model);
     [self.modelsWhichCanceledLoading addObject:model];
     [self.modelsLoading removeObject:model];
     [self notifyDelegatesIfDone];

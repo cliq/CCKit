@@ -8,7 +8,6 @@
 
 #if defined(DEBUG) || defined(ADHOC)
 #define CCLog(format, ...) NSLog(format, ## __VA_ARGS__)
-#define CCDebug(format, ...) NSLog(@"%s | %@", __PRETTY_FUNCTION__,[NSString stringWithFormat:format, ## __VA_ARGS__])
 #define CC_ENTER CCDebug(@"%@", @"entered")
 #define CC_EXIT CCDebug(@"%@", @"exiting")
 #define CC_MARK	CCDebug(@"")
@@ -16,13 +15,14 @@
 #define CC_END_TIMER(msg) 	NSTimeInterval ___stop = [NSDate timeIntervalSinceReferenceDate]; CCDebug([NSString stringWithFormat:@"%@ | Time=%f", msg, ___stop - ___start])
 #else
 #define CCLog(format, ...)
-#define CCDebug(format, ...)
 #define CC_ENTER
 #define CC_EXIT
 #define CC_MARK
 #define CC_START_TIMER
 #define CC_END_TIMER(msg)
 #endif
+
+#define CCDebug(format, ...) CLS_LOG(format, ## __VA_ARGS__)
 
 #pragma mark - CC Device
 #define CC_IDIOM_IPAD      (UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPad)

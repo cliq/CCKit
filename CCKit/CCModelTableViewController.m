@@ -66,25 +66,14 @@
 
 - (void)showLoading:(BOOL)show;
 {
-    if (show) {
-        CCDebug(@"Started loading...");
-    } else {
-        CCDebug(@"Finished loading...");
-    }
 }
 
 - (void)showError:(BOOL)show;
 {
-    if (show) {
-        CCDebug(@"Error loading model %@:\n%@", self.model, self.modelError);
-    }
 }
 
 - (void)showEmpty:(BOOL)show;
 {
-    if (show) {
-        CCDebug(@"Empty model.");
-    }
 }
 
 
