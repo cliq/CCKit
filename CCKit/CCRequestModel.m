@@ -261,6 +261,7 @@
         return;
     }
 #endif
+    [self willStartRequest:request];
     
     // Create the request
     self.downloadTask = [self.session downloadTaskWithRequest:request];
@@ -275,6 +276,11 @@
                                                        code:kCCModelErrorCodeInternal
                                                    userInfo:[NSDictionary dictionaryWithObject:@"Unable to create request." forKey:NSLocalizedDescriptionKey]]];
     }
+}
+
+- (void)willStartRequest:(NSMutableURLRequest *)request;
+{
+    // To override
 }
 
 - (void)willStartDownloadTask:(NSURLSessionDownloadTask *)downloadTask;

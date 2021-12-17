@@ -39,6 +39,7 @@
 - (void)load:(NSURLRequestCachePolicy)cachePolicy more:(BOOL)more;
 
 // Protected:
+- (void)willStartRequest:(NSMutableURLRequest *)request;
 - (void)willStartDownloadTask:(NSURLSessionDownloadTask *)downloadTask;
 - (void)parseResponse:(NSHTTPURLResponse *)response withData:(NSData *)data;
 - (NSMutableDictionary *)requestHeaders;
