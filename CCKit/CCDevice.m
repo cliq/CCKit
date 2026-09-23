@@ -7,6 +7,7 @@
 //
 
 #import "CCDevice.h"
+#import <UIKit/UIKit.h>
 
 @implementation CCDevice
 

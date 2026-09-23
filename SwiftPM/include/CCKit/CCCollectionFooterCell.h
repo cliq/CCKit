@@ -1,0 +1,1 @@
+../../../CCKit/CCCollectionFooterCell.h

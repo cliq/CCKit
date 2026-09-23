@@ -20,3 +20,6 @@ xcuserdata
 
 # CocoaPods (exclude pods but leave Podfile.lock)
 Pods/
+# Swift Package Manager
+.build/
+.swiftpm/

@@ -1,0 +1,1 @@
+../../../CCKit/CCCollectionHeaderCell.h

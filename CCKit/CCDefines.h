@@ -6,7 +6,9 @@
 //  Copyright (c) 2012 Cliq Consulting. All rights reserved.
 //
 
-#if defined(DEBUG) || defined(ADHOC)
+// CCKIT_DISABLE_INTERNAL_LOGGING is defined by Package.swift for CCKit's own
+// sources only, matching CocoaPods builds where DEBUG is never set for CCKit.
+#if (defined(DEBUG) || defined(ADHOC)) && !defined(CCKIT_DISABLE_INTERNAL_LOGGING)
 #define CCLog(format, ...) NSLog(format, ## __VA_ARGS__)
 #define CCDebug(format, ...) NSLog(@"%s | %@", __PRETTY_FUNCTION__,[NSString stringWithFormat:format, ## __VA_ARGS__])
 #define CC_ENTER CCDebug(@"%@", @"entered")
