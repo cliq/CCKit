@@ -7,7 +7,13 @@
 //
 
 #if defined(DEBUG) || defined(ADHOC)
-#define CCLog(format, ...) NSLog(format, ## __VA_ARGS__)
+#import <os/log.h>
+// Logs the formatted message as public so runtime values are not redacted as <private> in Console.app.
+// The message is formatted outside os_log() because its macro promotes -Wformat warnings to errors.
+#define CCLog(format, ...) do { \
+    NSString *__ccLogMessage = [NSString stringWithFormat:format, ## __VA_ARGS__]; \
+    os_log(OS_LOG_DEFAULT, "%{public}@", __ccLogMessage); \
+} while (0)
 #define CC_ENTER CCDebug(@"%@", @"entered")
 #define CC_EXIT CCDebug(@"%@", @"exiting")
 #define CC_MARK	CCDebug(@"")
